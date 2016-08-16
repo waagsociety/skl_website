@@ -1,0 +1,17 @@
+Title: Datahub
+
+----
+
+Author: Martin Risseeuw at Waag Society
+
+----
+
+Description: datahub is a new way of browsing data to boost your research
+
+----
+
+Keywords: Datasets,Browser
+
+----
+
+Copyright: 

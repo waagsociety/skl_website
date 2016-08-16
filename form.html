@@ -1,0 +1,33 @@
+  <script type="text/javascript" src="assets/js/dropzone.js"></script>
+  <script src="https://use.typekit.net/kzn1tml.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  <style type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.3.0/dropzone.css"></style>
+  <style>
+    *{
+      font-family: 'fira-sans', sans-serif;
+    }
+    h1, .alpha,
+    h2, .beta{
+      margin: 0;
+      letter-spacing: .01em;
+      font-family: "blockhead-black-face";
+      font-weight: 400;
+    }
+    h1, .alpha {
+      font-size: 1.625em;
+      line-height: 1.0476190476190477;
+      margin-bottom: 0.3em;
+    }
+  </style>
+<h2 class="alpha">Voeg een foto van je werkblad toe</h2>
+<form action="/api/file_upload" class="dropzone" id="my-awesome-dropzone">
+  <!-- <input type="text" style="border:1px solid black;" name="a"/>
+  <input type="text" name="b"/> -->
+</form>
+<form action="/api/form" >
+  <input type="text" name="title" hidden/>
+  <input type="text" name="title" id="resource-id" hidden/>
+</form>
+<div id="log">leeg</div>
+<script type="text/javascript" src="assets/js/init.js"></script>
+

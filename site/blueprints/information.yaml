@@ -1,0 +1,10 @@
+title: information
+pages: info-block
+files: true
+fields:
+  title:
+    label: Title
+    type:  text
+  text:
+    label: Text
+    type:  textarea

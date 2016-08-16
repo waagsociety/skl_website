@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 750">
+  <defs>
+    <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="linearGradient-1">
+      <stop stop-color="#AD6BFF" offset="0%"></stop>
+      <stop stop-color="#74BCF7" offset="100%"></stop>
+    </linearGradient>
+    <path class="st3" d="M0 749.6v-44.7c390.6 0 503.6-202 642.9-195.7 139.3 6.3 125.3 188.5 321.4 188.5 173.3 0 208.3-118.5 277-118.5 68.8 0 72 109 198.7 125.7V750L0 749.6z" id="pruple__graph" />
+    <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-3">
+        <feOffset dx="0" dy="-3" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+        <feGaussianBlur stdDeviation="20" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+        <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.15 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+    </filter>
+  </defs>
+  <path class="st0" d="M1440 750H0V588c5.3-6.3 6.4-9.1 11.6-15.3 59-71.5 107.9-133.5 228.4-133.5 131 0 198 118 432 118s299.3-174 415.4-174c116.2 0 215.7 125.2 352.6 125.2V750z" id="yellow__graph"/>
+  <path class="rocket__line" d="M1082.3 329.4s-60.7 70.4-92.5 92.5C916.1 473.1 835 558 671.6 558c-234 0-300.9-118-432-118C119 440 70.2 502 11.1 573.5 8.2 577 3.5 582.7 0 586.9" id="rocket__line"/>
+  <g id="rocket" class="rockje">
+    <path class="st1" d="M1079.1 321.9l-27 14.4M1091.5 333.4l-10.1 20.3"/>
+    <path class="st2" d="M1156.3 248.9c-.1-1.6-1.6-2.8-3.1-2.7-25.7 1.8-48.8 15.2-63.4 35.4-9.2 1-17.5 5.3-23.6 12.3-6.2 7.1-9.3 16.2-8.9 25.6.1 2.3 3.7 4.4 5.6 1.2 1-1.7 1.9-3.4 3.1-4.8 3-3.5 6.9-5.8 11.3-6.9.2.5.4.9.8 1.2l25.4 22.1c.4.3.8.5 1.3.7-.5 4.5-2.3 8.7-5.3 12.1-1.2 1.4-2.8 2.5-4.3 3.8-3.1 2.7 0 5.6 1.9 5.4 9.4-.9 17.9-5.3 24.1-12.3 6.1-7 9.2-15.9 8.9-25.1 18-17.5 28-42.3 26.2-68zM1128 252.8l25.8 22.5"/>
+    <ellipse transform="rotate(-48.997 1120.704 288.526)" class="st2" cx="1120.7" cy="288.6" rx="14.1" ry="14.1"/>
+    <path class="st2" d="M1090 281.2s-14.4 21-12.8 28.6M1130.9 316s-19 17.2-26.7 16.7"/>
+  </g>
+  <g id="pruple__graph__completer" stroke="none" fill="none">
+      <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#pruple__graph"></use>
+      <use fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#pruple__graph"></use>
+  </g>
+</svg>

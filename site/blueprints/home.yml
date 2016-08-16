@@ -1,0 +1,21 @@
+title: Home
+pages: false
+fields:
+  title:
+    label: Title
+    type:  text
+  pagetitle:
+    label: Page title
+    type:  text
+  tagline:
+    label: Tagline
+    type:  text
+  text:
+    label: Text
+    type:  textarea
+  heroimage:
+    label: Hero images
+    type:  selector
+    mode:  single
+    types:
+        - image

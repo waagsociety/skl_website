@@ -1,0 +1,45 @@
+@media (min-width:320px) {
+  .half__width{
+    width: 100%;
+  }
+  .big__padding,
+  .bigger__padding{
+    padding: $gutter;
+  }
+}
+
+@media (min-width:481px) {
+
+}
+
+@media (min-width:641px) {
+  
+}
+
+@media (min-width:961px) {
+  
+}
+
+@media (min-width:1024px) {
+  .half__width{
+    width: 50%;
+  }
+  .big__padding{
+    padding: $gutter * 2;
+  }
+  .bigger__padding{
+    padding: $gutter * 3;
+  }
+}
+
+@media (max-width:768px) and (min-height: 1000px) {
+ 
+}
+
+@media (min-width:1281px) {
+  
+}
+
+@media (min-width:2000px) {
+  
+}

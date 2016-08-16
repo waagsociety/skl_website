@@ -1,0 +1,61 @@
+.hero__header{
+  min-height: calc(100vh - 75px);
+  background-attachment: fixed;
+  background-size: cover;
+  font-size: 1.5em;
+  h1{
+    margin-bottom: 0.3em;
+  }
+}
+.tagline{
+  font-size: 2.625em;
+  color: white;
+  max-width: 17em;
+  transform: translateY(-50%);
+  left: $gutter * 4;
+  line-height: 1.3em;
+  z-index: 3;
+}
+
+.svg__header{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  svg{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  .st0{
+    fill:#3DE3CF;
+  }
+  .rocket__line{
+    fill:none;
+    stroke: rgba(255,255,255,1);
+    stroke-width:3;
+    stroke-linecap:round;
+    stroke-miterlimit:10;
+  }
+  .rocket__line{
+    stroke-width:0;
+  }
+}
+
+
+@media (min-width:320px) {
+  .tagline{
+    font-size: 1.625em;
+    top: 50%;
+    left: $gutter;
+  }
+}
+
+
+@media (min-width:1024px) {
+  .tagline{
+    font-size: 2.625em;
+    left: $gutter * 4;
+    top: 40%;
+  }
+}

@@ -1,0 +1,17 @@
+Title: Home
+
+----
+
+Text: 
+
+----
+
+Tagline: datahub is a new way of browsing data to boost your research
+
+----
+
+Pagetitle: datahub
+
+----
+
+Heroimage: hero-3.png
