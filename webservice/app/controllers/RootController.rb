@@ -49,20 +49,23 @@ class RootController < ApplicationController
     return resource_id 
   end    
   
-  post '/form_data' do
-                         
+  post '/form' do
+    
+    #                     
     name = params[:name]
     description = params[:description]   
     resource_id = params[:resource_id]   
     lat = params["lat"]
     lon = params["lon"]
-
-    upload_table = $DB[:upload]  
-    id = upload_table.insert(params)  
-    #  lines = scripts.where(:bid => sid).order(:sid,:weight)
-                    # plants = $DB[:plant]
-                     #insert what can be inserted
-                    # id = plants.insert(filtered)
+     
+    #
+    begin
+      upload_table = $DB[:upload]  
+      id = upload_table.insert(params)  
+    rescue Exception => e 
+      return "error : #{e}"
+    end
+    
     return "ok"
   end    
   
@@ -70,14 +73,14 @@ class RootController < ApplicationController
     
     features = []    
     
-    10.times do 
-      lat = rand()
-      lon = rand()
-      p = @@geo_factory.point(10, 20)  
-      props = {"resource_id" => (rand() * 10).to_i.to_s}
-      feature = @@entity_factory.feature(p, nil, props)  
-      features.push(feature)
-    end           
+    # 10.times do 
+    #       lat = rand()
+    #       lon = rand()
+    #       p = @@geo_factory.point(10, 20)  
+    #       props = {"resource_id" => (rand() * 10).to_i.to_s}
+    #       feature = @@entity_factory.feature(p, nil, props)  
+    #       features.push(feature)
+    #     end           
     
     feature_collection = @@entity_factory.feature_collection(features)
     

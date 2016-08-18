@@ -24,10 +24,13 @@
   <!-- <input type="text" style="border:1px solid black;" name="a"/>
   <input type="text" name="b"/> -->
 </form>
-<form action="/api/form" >
-  <input type="text" name="title" hidden/>
-  <input type="text" name="title" id="resource-id" hidden/>
+<form action="/api/form" method="POST" onsubmit="onSubmit()">
+  wie heeft deze meting gedaan : <input type="text" name="name" /><br>
+  wat zijn je meet bevindingen : <input type="text" name="description" /><br>
+  <input type="text" name="resource_id" id="resource-id" readonly/><br>
+  <input type="text" name="lat" id="lat" readonly/><br>
+  <input type="text" name="lon" id="lon" readonly/><br>
+  <input type="submit" /><br>
 </form>
-<div id="log">leeg</div>
 <script type="text/javascript" src="assets/js/init.js"></script>
 

@@ -9,7 +9,7 @@ Dropzone.options.myAwesomeDropzone = {
 			document.getElementById("resource-id").value = resp
 		});
 		this.on("drop", function(file, resp) { 
-			document.getElementById("resource-id").value = ""
+			document.window.parent.bla()("resource-id").value = ""
 			this.removeAllFiles(true);
 		});
   },
@@ -22,7 +22,8 @@ Dropzone.options.myAwesomeDropzone = {
 document.addEventListener("DOMContentLoaded", function(event) {
   var lat = parseFloat(getQueryVariable("lat"));
   var lng = parseFloat(getQueryVariable("lng"));
-  document.getElementById("log").innerHTML = `lat = ${lat} & lng = ${lng}`;
+	document.getElementById("lat").value = lat;
+	document.getElementById("lon").value = lng;
 });
 
 function getQueryVariable(variable)
@@ -34,4 +35,10 @@ function getQueryVariable(variable)
          if(pair[0] == variable){return pair[1];}
   }
   return(false);
+}
+           
+function onSubmit()
+{   
+	var el = window.parent.document.querySelector(".mapboxgl-popup")
+	el.parentNode.removeChild(el)
 }
