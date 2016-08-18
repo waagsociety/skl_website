@@ -29,7 +29,7 @@ function loadMap(){
         .setLngLat(e.lngLat);
 
     popup.setHTML(`
-      <iframe src="form.html?lat=10.1113423178234&lng=20"></iframe>
+      <iframe src="form.html?lat=10.1113423178234&lng=30"></iframe>
     `);
     popup.addTo(map);
     loadDropzone();
@@ -63,7 +63,8 @@ function loadMap(){
 loadMap();
 
 
-function loadDropzone(){
+function loadDropzone(){   
+	/*
   console.log('drop fired');
   const dropzoneId = document.getElementById('my-awesome-dropzone');
   console.log(Dropzone.options.myAwesomeDropzone);
@@ -87,5 +88,6 @@ function loadDropzone(){
         //we get here when other checks are fine
         done();
      }
-  };
+  };   
+	*/
 }

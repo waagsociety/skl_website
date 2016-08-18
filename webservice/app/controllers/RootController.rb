@@ -76,19 +76,21 @@ class RootController < ApplicationController
   
   get '/markers' do
     
-    features = []    
+    features = []  
+               
+    #make features
+    upload_table = $DB[:upload]  
+    upload_table.all.each { |upload|
+      p = @@geo_factory.point(upload[:lat],upload[:lon]) 
+      props = {"resource_id" => upload[:resource_id]}
+      feature = @@entity_factory.feature(p, nil, props)  
+      features.push(feature)
+    }     
     
-    # 10.times do 
-    #       lat = rand()
-    #       lon = rand()
-    #       p = @@geo_factory.point(10, 20)  
-    #       props = {"resource_id" => (rand() * 10).to_i.to_s}
-    #       feature = @@entity_factory.feature(p, nil, props)  
-    #       features.push(feature)
-    #     end           
-    
+    #put in collection collection
     feature_collection = @@entity_factory.feature_collection(features)
-    
+                       
+    #return as json
     content_type "application/vnd.geo+json"
     return RGeo::GeoJSON.encode(feature_collection).to_json
   end
