@@ -57,13 +57,18 @@ class RootController < ApplicationController
     resource_id = params[:resource_id]   
     lat = params["lat"]
     lon = params["lon"]
-     
+    
     #
-    begin
+    begin       
+      if resource_id.empty? then  #TODO: check for existence
+         puts "bla"
+         throw "resource not found"
+      end
+      
       upload_table = $DB[:upload]  
       id = upload_table.insert(params)  
-    rescue Exception => e 
-      return "error : #{e}"
+    rescue Exception => e
+      halt 400, "#{e}"
     end
     
     return "ok"

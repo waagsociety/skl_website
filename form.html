@@ -1,4 +1,5 @@
   <script type="text/javascript" src="assets/js/dropzone.js"></script>
+  <script type="text/javascript" src="assets/js/init.js"></script>
   <script src="https://use.typekit.net/kzn1tml.js"></script>
   <script>try{Typekit.load({ async: true });}catch(e){}</script>
   <style type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.3.0/dropzone.css"></style>
@@ -20,11 +21,11 @@
     }
   </style>
 <h2 class="alpha">Voeg een foto van je werkblad toe</h2>
+<!-- add dropzone -->
 <form action="/api/file_upload" class="dropzone" id="my-awesome-dropzone">
-  <!-- <input type="text" style="border:1px solid black;" name="a"/>
-  <input type="text" name="b"/> -->
-</form>
-<form action="/api/form" method="POST" onsubmit="onSubmit()">
+</form>           
+<!-- add form for -->
+<form class="werkblad">
   wie heeft deze meting gedaan : <input type="text" name="name" /><br>
   wat zijn je meet bevindingen : <input type="text" name="description" /><br>
   <input type="text" name="resource_id" id="resource-id" readonly/><br>
@@ -32,5 +33,5 @@
   <input type="text" name="lon" id="lon" readonly/><br>
   <input type="submit" /><br>
 </form>
-<script type="text/javascript" src="assets/js/init.js"></script>
+
 
