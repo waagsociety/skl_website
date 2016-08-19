@@ -22,6 +22,7 @@ class ApplicationController < Sinatra::Base
     disable :protection
     set :public_folder, 'public'     
     set :sessions, true
+    set :views, File.join(settings.root, "..", "templates")
     
   end
   
