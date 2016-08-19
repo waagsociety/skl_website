@@ -40,16 +40,17 @@ function submitForm() {
 	
 	//           
 	var form = document.querySelector(".werkblad")
-	var formData = new FormData(form)  
+	var formData = new FormData(form) 
+	console.log("formdata", formData) 
 	
   //verify
-  for (var pair of formData.entries()) {
-		switch(pair[0]) {
+  for (var key in formData) {
+		switch(key) {
 			case "name":
-				console.log("name", pair[1])
+				console.log("name", formData[key])
 				break;
 			case "description":
-				console.log("description", pair[1])
+				console.log("description", formData[key])
 				break;
 		 	default:
 				break;
@@ -72,9 +73,13 @@ function submitForm() {
 			}
 		})
 		.then(function(text){    
-			console.log("response text:", text)
-		 	var el = window.parent.document.querySelector(".mapboxgl-popup")
-			el.parentNode.removeChild(el)
+			console.log("result", text)
+			if(window.parent != null && window.parent.document != null)
+			{
+				var evt = new Event('formDone'); 
+				console.log("p", evt) 
+				window.parent.document.dispatchEvent(evt);
+			} 
 		})
 		.catch(function(ex) {
 			alert(ex)

@@ -14,7 +14,7 @@ require 'securerandom'
 
 class RootController < ApplicationController   
   
-  @@geo_factory = RGeo::Cartesian.simple_factory(srid: 4326)
+  @@geo_factory = RGeo::Geographic.spherical_factory()
   @@entity_factory = RGeo::GeoJSON::EntityFactory.instance
   
   # get '/*' do
@@ -81,8 +81,8 @@ class RootController < ApplicationController
     #make features
     upload_table = $DB[:upload]  
     upload_table.all.each { |upload|
-      p = @@geo_factory.point(upload[:lat],upload[:lon]) 
-      props = {"resource_id" => upload[:resource_id]}
+      p = @@geo_factory.point(upload[:lon], upload[:lat]) 
+      props = {"resource_id" => upload[:resource_id], "icon" => "star", "description" => upload[:description]}
       feature = @@entity_factory.feature(p, nil, props)  
       features.push(feature)
     }     

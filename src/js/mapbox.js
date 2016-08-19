@@ -1,93 +1,114 @@
+var gMap = null;  
+
+document.addEventListener("DOMContentLoaded", function(event) {
+	loadMap();     
+}); 
+
+/*
+form in iframe is going to throw event when it's done
+*/                                   
+document.addEventListener("formDone", function(evt) {
+	
+	//remove popups
+	var popups = document.querySelectorAll(".mapboxgl-popup")
+	for(var i=0;i<popups.length;i++) {
+		popups[i].parentNode.removeChild(popups[i]);
+	}
+       
+	//reload markers
+	loadMapContent();
+
+});  
+           
+//initialize map and handlers
 function loadMap(){
   mapboxgl.accessToken = 'pk.eyJ1IjoibWFydGlud2FhZyIsImEiOiJjaWo0NWt6ZWYwMDE0dXlrcm0yenVkNDR5In0.0I9xJzLubP9g3V_NTt1PhA';
-  var map = new mapboxgl.Map({
+  gMap = new mapboxgl.Map({
     container: 'map', // container id
     style: 'mapbox://styles/martinwaag/cirx7ujxw003cgymgmwofw995', //stylesheet location
     center: [4.820902482840296, 52.3749057570665], // starting position
     zoom: 12 // starting zoom
   });
-
-  map.on('load', function() {
-    map.addSource('meeting', {
-      type: 'geojson',
-      data: './assets/data/metingen.geojson',
-    });
-
-    map.addLayer({
-      "id": "meeting",
-      "type": "symbol",
-      "source": "meeting",
-      "layout": {
-        "icon-image": "{icon}-15",
-        "icon-allow-overlap": true
-      }
-    });
+              
+	//get markers form webservice and put in layer on map
+  gMap.on('load', function() {
+		loadMapContent();
   });
+          
+	//add popup in iframe with image upload form
+  gMap.on('click', function (e) {
 
-  map.on('click', function (e) {
-    var popup = new mapboxgl.Popup()
-        .setLngLat(e.lngLat);
+		//
+		var features = gMap.queryRenderedFeatures(e.point, { layers: ['meeting'] });
+		if(features.length == 0)
+		{
+			//
+	    var popup = new mapboxgl.Popup().setLngLat(e.lngLat);  
+			var src = "form.html?lat=" + e.lngLat.lat + "&lng=" + e.lngLat.lng;
+	    popup.setHTML("<iframe src=\""+src+"\"></iframe>");
+	    popup.addTo(gMap);            
+		}
+		else
+		{          
+			for(var i=0;i<features.length;i++)
+			{
+				 var popup = new mapboxgl.Popup().setLngLat(features[i].geometry.coordinates);
+				 popup.setHTML(features[i].properties.description);
+				 popup.addTo(gMap);
+			}
+		}
 
-    popup.setHTML(`
-      <iframe src="form.html?lat=10.1113423178234&lng=30"></iframe>
-    `);
-    popup.addTo(map);
-    loadDropzone();
-  });
-
-  map.on('click', function (e) {
-    var features = map.queryRenderedFeatures(e.point, { layers: ['meeting'] });
-
-    if (!features.length) {
-        return;
-    }
-
-    var feature = features[0];
-
-    // Populate the popup and set its coordinates
-    // based on the feature found.
-    var popup = new mapboxgl.Popup()
-        .setLngLat(feature.geometry.coordinates);
-
-    popup.setHTML(feature.properties.description);
-    popup.addTo(map);
-  });
-
+	});
+       
   // Use the same approach as above to indicate that the symbols are clickable
   // by changing the cursor style to 'pointer'.
-  map.on('mousemove', function (e) {
-      var features = map.queryRenderedFeatures(e.point, { layers: ['meeting'] });
-      map.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
-  });
+  /*gMap.on('mousemove', function (e) {
+      var features = gMap.queryRenderedFeatures(e.point, { layers: ['meeting'] });
+      gMap.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
+  });*/
+}   
+      
+//update map content
+function loadMapContent() {
+	                
+	if(gMap != null)
+	{
+		var source = "/api/markers"
+		window.fetch(source)
+		  .then(function(response){
+			  if (response.status >= 200 && response.status < 300) {  
+					return response.json(); //we don't process it any further
+				} else {
+					throw response.statusText;
+				}
+			})
+			.then(function(json){    
+				//remove existing source if there is one
+				if(gMap.getSource('meeting') != null)
+				{
+					gMap.removeSource('meeting');
+				}
+				//add markers and layer
+				gMap.addSource('meeting', {
+		      type: 'geojson',
+		      data: json
+		    });
+				gMap.addLayer({
+		      "id": "meeting",
+		      "type": "symbol",
+		      "source": "meeting",
+		      "layout": {
+		        "icon-image": "{icon}-15",
+		        "icon-allow-overlap": true
+		      }
+		    });
+			})
+			.catch(function(ex) {
+				alert(ex)
+		  })  
+	}
+	
+	
 }
-loadMap();
 
 
-function loadDropzone(){   
-	/*
-  console.log('drop fired');
-  const dropzoneId = document.getElementById('my-awesome-dropzone');
-  console.log(Dropzone.options.myAwesomeDropzone);
-  Dropzone.options.myAwesomeDropzone = {
-    acceptedFiles: "image/jpeg",  
-    uploadMultiple: false,   
-    maxFiles: 1,
-    init: function() { 
-      console.log('what is this', this);
-      this.on("success", function(file, resp) { 
-        //this.removeFile(file);
-        console.log("uploaded:", resp);       
-        document.getElementById("resource-id").value = resp
-      });
-      this.on("drop", function(file, resp) { 
-        document.getElementById("resource-id").value = ""
-        this.removeAllFiles(true);
-      });
-    },
-    accept: function(file, done) {   
-        //we get here when other checks are fine
-        done();
-     }
-  };   
-	*/
-}

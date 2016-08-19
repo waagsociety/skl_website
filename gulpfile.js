@@ -17,7 +17,8 @@ gulp.task('styles', function() {
 
 gulp.task('js', function() {
     gulp.src([
-      'src/js/*.js'
+      'src/js/*.js',
+			'src/js/vendors/fetch.js'
     ])
     .pipe(babel({
         presets: ['es2015']
@@ -31,9 +32,9 @@ gulp.task('js', function() {
 gulp.task('js2', function() {
     gulp.src([
       'src/js/vendors/dropzone.js',
-			'src/js/iframe/iframe.js',
 			'src/js/vendors/html5-formdata-polyfill.js',
-			'src/js/vendors/fetch.js'
+			'src/js/vendors/fetch.js',
+			'src/js/iframe/iframe.js'			
     ])
     .pipe(babel({
         presets: ['es2015']
