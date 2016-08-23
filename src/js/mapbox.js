@@ -125,7 +125,7 @@ function loadResourceOnMap(id) {
 				 //use someting for this ?? jsx 
 				 var div = document.createElement("div");
 				 var img = document.createElement("img");
-				 img.src = json.image_url 
+				 img.src = json.thumb_url 
 				 var text = document.createTextNode(json.description);
 				 div.appendChild(text);
 				 div.appendChild(img)                   

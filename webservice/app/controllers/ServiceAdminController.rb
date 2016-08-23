@@ -1,5 +1,3 @@
-require "config.rb"
-
 #minimal cms
 class ServiceAdminController < ApplicationController
     

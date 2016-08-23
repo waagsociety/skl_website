@@ -1,36 +1,46 @@
-  <script type="text/javascript" src="assets/js/iframe.min.js"></script>
-  <script src="https://use.typekit.net/kzn1tml.js"></script>
-  <script>try{Typekit.load({ async: true });}catch(e){}</script>
-  <style type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.3.0/dropzone.css"></style>
-  <style>
-    *{
-      font-family: 'fira-sans', sans-serif;
-    }
-    h1, .alpha,
-    h2, .beta{
-      margin: 0;
-      letter-spacing: .01em;
-      font-family: "blockhead-black-face";
-      font-weight: 400;
-    }
-    h1, .alpha {
-      font-size: 1.625em;
-      line-height: 1.0476190476190477;
-      margin-bottom: 0.3em;
-    }
-  </style>
-<h2 class="alpha">Voeg een foto van je werkblad toe</h2>
-<!-- add dropzone -->
-<form action="/api/file_upload" class="dropzone" id="my-awesome-dropzone">
-</form>           
-<!-- add form for -->
-<form class="werkblad">
-  wie heeft deze meting gedaan : <input type="text" name="name" /><br>
-  wat zijn je meet bevindingen : <input type="text" name="description" /><br>
-  <input type="text" name="resource_id" id="resource-id" readonly/><br>
-  <input type="text" name="lat" id="lat" readonly/><br>
-  <input type="text" name="lon" id="lon" readonly/><br>
-  <input type="submit" /><br>
-</form>
+<!DOCTYPE html>
+<html>
+	<head> 
+		<title>Upload form</title>
+		<script type="text/javascript" src="assets/js/iframe.min.js"></script>
+		<script src="https://use.typekit.net/kzn1tml.js"></script>
+		<script>try{Typekit.load({ async: true });}catch(e){}</script>
+		<link rel="stylesheet" href="assets/css/dropzone.css">
+		<style>
+		    * {
+		      font-family: 'fira-sans', sans-serif;
+		    }
+		    h1, .alpha,
+		    h2, .beta{
+		      margin: 0;
+		      letter-spacing: .01em;
+		      font-family: "blockhead-black-face";
+		      font-weight: 400;
+		    }
+		    h1, .alpha {
+		      font-size: 1.625em;
+		      line-height: 1.0476190476190477;
+		      margin-bottom: 0.3em;
+		    }
+		</style>
+	</head>
+	<body>
+		<h2 class="alpha">Voeg een foto van je werkblad toe</h2>
+	
+		<!-- add dropzone -->
+		<form action="/api/file_upload" class="dropzone" id="my-awesome-dropzone">
+		</form>           
+	
+		<!-- add form for -->
+		<form class="werkblad">
+		  wie heeft deze meting gedaan : <input type="text" name="name" /><br>
+		  wat zijn je meet bevindingen : <input type="text" name="description" /><br>
+		  <input type="text" name="resource_id" id="resource-id" readonly/><br>
+		  <input type="text" name="lat" id="lat" readonly/><br>
+		  <input type="text" name="lon" id="lon" readonly/><br>
+		  <input type="submit" /><br>
+		</form>
+	</body>
+</html>  
 
 
