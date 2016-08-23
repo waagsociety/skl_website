@@ -1,5 +1,9 @@
 #minimal cms
 class ServiceAdminController < ApplicationController
+    
+  use Rack::Auth::Basic, "Restricted Area" do |username, password|
+      [username, password] == ['user', 'secret']  
+  end
   
   get "/resource" do
     @entries = []

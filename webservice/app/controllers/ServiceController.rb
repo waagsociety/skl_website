@@ -1,6 +1,7 @@
 require 'rgeo/geo_json' 
 require 'securerandom'
-require 'pathname'
+require 'pathname'  
+require 'mime/types'
                           
 # CREATE TABLE upload (
 #   id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
@@ -30,7 +31,7 @@ class ServiceController < ApplicationController
     resource_id = SecureRandom.hex(10) 
                          
     #copy to public path
-    dest_file = File.absolute_path(File.join(settings.public_folder, "upload", "#{resource_id}#{File.extname(tmp_file)}"))                
+    dest_file = compilePathForResourceId resource_id, File.extname(tmp_file)                
     r = FileUtils.cp(tmp_file, dest_file)                      
                        
     #return resource id
@@ -98,19 +99,22 @@ class ServiceController < ApplicationController
     if file != nil && record then
     
       #find table record 
-      filename = Pathname.new(file).basename
-      uri = nil
-      puts "r #{request.path}"
+      image_uri = nil
+      thumb_uri = nil               
+      
       case request.scheme    
         when "https" 
-           uri = URI::HTTPS.build({:host => request.host, :port=> request.port, :path => "/api/upload/#{filename}"}) #this works both by proxy as direct 
+           image_uri = URI::HTTPS.build({:host => request.host, :port=> request.port, :path => "/api/image/#{id}"})  
+           thumb_uri = URI::HTTPS.build({:host => request.host, :port=> request.port, :path => "/api/thumb/#{id}"})
         else
-           uri = URI::HTTP.build({:host => request.host, :port=> request.port, :path => "/api/upload/#{filename}"}) #this works both by proxy as direct 
+           image_uri = URI::HTTP.build({:host => request.host, :port=> request.port, :path => "/api/image/#{id}"})  
+           thumb_uri = URI::HTTP.build({:host => request.host, :port=> request.port, :path => "/api/thumb/#{id}"})
       end  
         
       #make result
       result[:resource_id] = id
-      result[:image_url] = uri
+      result[:image_url] = image_uri
+      result[:thumb_url] = thumb_uri
       result[:description] = record[:description]
       result[:name] = record[:name]
       result[:lat] = record[:lat]
@@ -118,9 +122,42 @@ class ServiceController < ApplicationController
     end             
     
     return result.to_json                      
-  end  
+  end
   
+  get '/image/:id' do |id|
+     
+    #create if needed 
+    path = getPathForResourceId id
+
+    if path != nil then
+      mime = MIME::Types.type_for(path).first
+      mime = "image/jpeg" if mime == nil
+      content_type mime
+      send_file path, :type => mime       
+    end
+    
+    halt 404, "image not found"
+  end 
   
+  get '/thumb/:id' do |id|
+     
+    #create if needed 
+    path = getThumbPathForResourceId id
+    if path == nil 
+      createThumbForResourceId id      
+      path = getThumbPathForResourceId id
+    end                                  
+                     
+    #serve if possible
+    if path != nil then
+      mime = MIME::Types.type_for(path).first
+      mime = "image/jpeg" if mime == nil
+      content_type mime
+      send_file path, :type => mime       
+    end
+    
+    halt 404, "image not found"
+  end 
   
   
 end

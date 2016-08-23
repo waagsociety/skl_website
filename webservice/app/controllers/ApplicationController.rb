@@ -13,7 +13,11 @@ class ApplicationController < Sinatra::Base
      
     #
     puts "making upload dir"
-    FileUtils.mkdir_p 'public/upload'
+    FileUtils.mkdir_p 'public/upload'  
+    
+    #
+    puts "making thumb dir"
+    FileUtils.mkdir_p 'public/thumb'
     
     set :bind, '0.0.0.0'
     set :server, 'thin'  # or thin, mongrel, webrick  
