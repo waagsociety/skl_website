@@ -1,2 +1,2 @@
 ADMIN_USER = "user"
-ADMIN_PASS = "secret"
+ADMIN_PASS = "scrt"

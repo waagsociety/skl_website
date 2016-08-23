@@ -1,5 +1,6 @@
 # config.ru
-require 'sinatra/base'
+require 'sinatra/base' 
+require_relative 'config.rb'
 
 # pull in the helpers and controllers, order is important! 
 Dir.glob('./app/helpers/*.rb').sort.each { |file| require file }
