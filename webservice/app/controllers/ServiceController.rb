@@ -11,7 +11,7 @@ require 'mime/types'
 #   lon FLOAT,  
 #   resource_type INT,
 #   resource_id TEXT,
-#   INTEGER pubished,
+#   published INTEGER,
 #   sqltime TIMESTAMP DEFAULT (DATETIME(CURRENT_TIMESTAMP, 'LOCALTIME')) NOT NULL
 # );
 

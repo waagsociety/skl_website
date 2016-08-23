@@ -12,12 +12,26 @@ class ApplicationController < Sinatra::Base
     $DB = Sequel.connect('sqlite://db.sqlite3')                             
      
     #
-    puts "making upload dir"
-    FileUtils.mkdir_p 'public/upload'  
+    if Dir.exist? "files" then
+      if not Dir.exists? getUploadFolder then
+         puts "creating uploads dir"
+         FileUtils.mkdir_p getUploadFolder
+      end
+      if not Dir.exists? getThumbFolder then
+         puts "creating thumbs dir"
+         FileUtils.mkdir_p getThumbFolder
+      end
+    else
+      puts "files directory does not exist, you have to created or symlink it" 
+      exit 
+    end                                                                      
     
-    #
-    puts "making thumb dir"
-    FileUtils.mkdir_p 'public/thumb'
+    # puts "making upload dir"
+    #     FileUtils.mkdir_p 'public/upload'  
+    #     
+    #     #
+    #     puts "making thumb dir"
+    #     FileUtils.mkdir_p 'public/thumb'
     
     set :bind, '0.0.0.0'
     set :server, 'thin'  # or thin, mongrel, webrick  

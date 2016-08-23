@@ -1,3 +1,11 @@
+#install imagemagick before gem rmagick
+apt-get install imagemagick libmagickcore-dev libmagickwand-dev
+                                       
+#make wrapper script for init.d usage
+https://rvm.io/deployment/init-d
+
+
+
 #add this to httpd.conf to integrate webservice in kirby site
 
 <Location /api/>

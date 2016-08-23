@@ -1,25 +1,27 @@
 require 'rmagick'
                    
-def bla
-   puts "bl*******************a"
-end                           
                                             
-#
-def compilePathForResourceId resource_id, extension
-   return File.join(settings.public_folder, "upload", "#{resource_id}#{extension.downcase}")
+def getUploadFolder 
+  return File.join("files","upload")
 end
 
+def getThumbFolder
+  return File.join("files","thumb") 
+end
+
+#
+def compilePathForResourceId resource_id, extension
+   return File.join(getUploadFolder, "#{resource_id}#{extension.downcase}")
+end
                                             
 #get the path for resource if the file exist
 def getPathForResourceId id
-  uploads_folder = File.absolute_path(File.join(settings.public_folder, "upload"))        
-  return Dir.glob(File.join(uploads_folder, "#{id}.*")).first
+  return Dir.glob(File.join(getUploadFolder, "#{id}.*")).first
 end 
 
 #get the path for resource if the file exist
 def getThumbPathForResourceId id
-  thumbs_folder = File.absolute_path(File.join(settings.public_folder, "thumb"))        
-  return Dir.glob(File.join(thumbs_folder, "#{id}.*")).first
+  return Dir.glob(File.join(getThumbFolder, "#{id}.*")).first
 end
 
 def createThumbForResourceId id
@@ -30,7 +32,7 @@ def createThumbForResourceId id
      #compile path
      puts "create thumb"
      filename = Pathname.new(image_path).basename
-     dest_path = File.join(settings.public_folder, "thumb", filename) 
+     dest_path = File.join(getThumbFolder, filename) 
 
      #make longest side 200 pix
      img = Magick::Image::read(image_path).first
