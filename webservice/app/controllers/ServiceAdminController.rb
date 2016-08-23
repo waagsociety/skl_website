@@ -1,4 +1,4 @@
-require_relative "../config/config.rb"
+require "config.rb"
 
 #minimal cms
 class ServiceAdminController < ApplicationController
