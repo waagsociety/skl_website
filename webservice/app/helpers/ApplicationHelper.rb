@@ -1,4 +1,5 @@
-require 'rmagick'
+require 'rmagick'     
+require 'zbar'
                    
                                             
 def getUploadFolder 
@@ -39,4 +40,24 @@ def createThumbForResourceId id
      img.resize_to_fit! 200 
      img.write dest_path
    end
+end       
+
+def readQRCode id
+  path = getPathForResourceId id                                   
+  if path != nil then                   
+    file = File.open path
+    image = ZBar::Image.from_jpeg file
+    file.close 
+    p = ZBar::Processor.new 
+    results = p.process image 
+    if results.length == 1 then
+      return results.first.data
+    elsif results.length == 0
+      raise "found no QR code"
+    else
+      raise "found more then one QR code"
+    end
+  end  
+  
+  return ""
 end

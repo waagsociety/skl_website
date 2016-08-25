@@ -22,20 +22,31 @@ class ServiceController < ApplicationController
   
   post '/file_upload' do
     
-    #params        
-    name = params[:file][:name]
-    filename = params[:file][:filename]   
-    tmp_file = params[:file][:tempfile]  
+    response = { :result => {:resource_id => "", :qr_code => ""}, :errors => []}
     
-    #generate resource id
-    resource_id = SecureRandom.hex(10) 
+    begin
+    
+      #params        
+      name = params[:file][:name]
+      filename = params[:file][:filename]   
+      tmp_file = params[:file][:tempfile]  
+    
+      #generate resource id
+      resource_id = SecureRandom.hex(10) 
+      response[:result][:resource_id] = resource_id
                          
-    #copy to public path
-    dest_file = compilePathForResourceId resource_id, File.extname(tmp_file)                
-    r = FileUtils.cp(tmp_file, dest_file)                      
-                       
+      #copy to public path
+      dest_file = compilePathForResourceId resource_id, File.extname(tmp_file)                
+      FileUtils.cp(tmp_file, dest_file)
+      
+      #try retrieve qr code
+      response[:result][:qr_code] = readQRCode resource_id  
+    rescue Exception => e
+      response[:errors].push e.to_s
+    end
+    
     #return resource id
-    return resource_id 
+    return response.to_json 
   end    
   
   post '/form' do
@@ -43,20 +54,29 @@ class ServiceController < ApplicationController
     #                     
     name = params[:name]
     description = params[:description]   
-    resource_id = params[:resource_id]   
+    resource_id = params[:resource_id]
+    qr_code = params[:qr_code]   
     lat = params["lat"]
     lon = params["lon"]
     
-    #
+    
     begin       
-      if resource_id.empty? then  #TODO: check for existence
-         puts "bla"
+      if getPathForResourceId resource_id == nil then
          throw "resource not found"
-      end
+      end   
       
-      upload_table = $DB[:upload]  
-      params[:published] = 1
-      id = upload_table.insert(params)  
+      #make a record for the db with the field in this post that are cols in the db
+      upload_table = $DB[:upload]      
+      cols = {}
+      params.each do |key,val| 
+        if upload_table.columns.include?(key.to_sym) then    
+          cols[key.to_sym] = val
+        end
+      end
+         
+      #publish if we have valid qr
+      cols[:published] = qr_code.empty? ? 0 : 1
+      id = upload_table.insert(cols)  
     rescue Exception => e
       halt 400, "#{e}"
     end

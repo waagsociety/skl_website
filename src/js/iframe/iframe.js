@@ -5,8 +5,14 @@ Dropzone.options.myAwesomeDropzone = {
 	addRemoveLinks:true,
 	init: function() { 
     this.on("success", function(file, resp) { 
-			console.log("uploaded:", resp); 			
-			document.getElementById("resource-id").value = resp
+			var json = JSON.parse(resp)
+			console.log("resp", resp)
+			document.getElementById("resource-id").value = json.result.resource_id 
+			document.getElementById("qr-code").value = json.result.qr_code
+      if(json.errors.length != 0) {
+	    	alert(json.errors.join(","))
+			}
+			
 		});
 		this.on("error", function(file, resp) { 
 			/*setTimeout(function(){
@@ -27,6 +33,7 @@ Dropzone.options.myAwesomeDropzone = {
 			}
 			
 			document.getElementById("resource-id").value = ""
+			document.getElementById("qr-code").value = ""
 			//this.removeAllFiles(true);
 		});
   },

@@ -2,6 +2,10 @@
 
 > apt-get install imagemagick libmagickcore-dev libmagickwand-dev
 
+## install zbar
+
+sudo apt-get install zbar-tools
+
 ## install Ruby (non RVM version makes it easier to setup thin as service)
 
 > sudo apt-get install ruby2.1 ruby2.1-dev
