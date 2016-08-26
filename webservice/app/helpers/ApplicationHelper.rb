@@ -1,5 +1,6 @@
 require 'rmagick'     
-require 'zbar'
+require 'mkmf'
+require 'rexml/document'
                    
                                             
 def getUploadFolder 
@@ -43,21 +44,29 @@ def createThumbForResourceId id
 end       
 
 def readQRCode id
-  path = getPathForResourceId id                                   
-  if path != nil then                   
-    file = File.open path
-    image = ZBar::Image.from_jpeg file
-    file.close 
-    p = ZBar::Processor.new 
-    results = p.process image 
-    if results.length == 1 then
-      return results.first.data
-    elsif results.length == 0
-      raise "found no QR code"
+  path = getPathForResourceId id
+  result = ""
+   
+  if path != nil then   
+    zbar = find_executable "zbarimg"      
+    if  zbar then
+       xml = `#{zbar} --xml -q #{path}`  
+       doc = REXML::Document.new(xml)
+       qr_codes = doc.elements.to_a("barcodes/source/index/symbol/data").map {|data| data.text}
+       
+       if qr_codes.length == 1 then
+         result = qr_codes.first
+       elsif qr_codes.length == 0
+         raise "found no QR code"
+       else
+         raise "found more then one QR code"
+       end
     else
-      raise "found more then one QR code"
+      raise "no zbar installed"
     end
-  end  
+  else
+    raise "image not found"
+  end                                            
   
-  return ""
+  return result
 end
