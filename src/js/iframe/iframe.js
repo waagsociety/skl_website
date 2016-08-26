@@ -6,12 +6,31 @@ Dropzone.options.myAwesomeDropzone = {
 	init: function() { 
     this.on("success", function(file, resp) { 
 			var json = JSON.parse(resp)
-			console.log("resp", resp)
+			
+			//set hidden form values
 			document.getElementById("resource-id").value = json.result.resource_id 
-			document.getElementById("qr-code").value = json.result.qr_code
-      if(json.errors.length != 0) {
-	    	alert(json.errors.join(","))
-			}
+			document.getElementById("qr-code").value = json.result.qr_code      
+			                             
+			//clear qr result
+			var warning = document.getElementById("image_quality_warning");
+		 	while (warning.firstChild) 
+		 	{
+		  	warning.removeChild(warning.firstChild);
+		 	}
+           
+			//
+			if(json.errors.length != 0) 
+			{
+ 			 	var warning = document.getElementById("image_quality_warning"); 
+				warning.appendChild(document.createTextNode("Probeer een goede scherpe foto te maken waar het werkblad precies op past")) 
+				warning.style.backgroundColor = "red"
+			} 
+			else 
+			{
+				var warning = document.getElementById("image_quality_warning"); 
+				warning.appendChild(document.createTextNode("Dit is een goede scherpe foto")) 
+				warning.style.backgroundColor = "green"
+			}     
 			
 		});
 		this.on("error", function(file, resp) { 

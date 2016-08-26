@@ -52,7 +52,7 @@ def readQRCode id
     if  zbar then
        xml = `#{zbar} --xml -q #{path}`  
        doc = REXML::Document.new(xml)
-       qr_codes = doc.elements.to_a("barcodes/source/index/symbol/data").map {|data| data.text}
+       qr_codes = doc.elements.to_a("barcodes/source/index/symbol[@type=\"QR-Code\"]/data").map {|data| data.text}
        
        if qr_codes.length == 1 then
          result = qr_codes.first
