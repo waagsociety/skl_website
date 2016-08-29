@@ -18,6 +18,7 @@ gulp.task('styles', function() {
 gulp.task('js', function() {
     gulp.src([
       'src/js/*.js',
+			'src/js/vendors/promise-7.0.4.min.js',
 			'src/js/vendors/fetch.js'
     ])
     .pipe(babel({
@@ -33,6 +34,7 @@ gulp.task('js2', function() {
     gulp.src([
       'src/js/vendors/dropzone.js',
 			'src/js/vendors/html5-formdata-polyfill.js',
+			'src/js/vendors/promise-7.0.4.min.js',
 			'src/js/vendors/fetch.js',
 			'src/js/iframe/iframe.js'			
     ])
