@@ -1,4 +1,6 @@
-<?php snippet('header', array("script_links" => array("https://api.tiles.mapbox.com/mapbox-gl-js/v0.22.0/mapbox-gl.js"))) ?>
+<?php snippet('header', array("script_links" => array("http://api.tiles.mapbox.com/mapbox-gl-js/v0.22.0/mapbox-gl.js", "assets/js/main.min.js"))) ?>
+
+
 
 <?php snippet('navigation') ?>
 

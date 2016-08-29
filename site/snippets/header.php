@@ -11,8 +11,10 @@
   <?php snippet('favicons') ?>
   <script src="https://use.typekit.net/kzn1tml.js"></script>
   <script>try{Typekit.load({ async: true });}catch(e){}</script>
-  <?php foreach($script_links as $script_link): ?>
-      <script type="text/javascript" src="<?php echo $script_link ?>"></script>
-  <?php endforeach ?>
+  <?php if ( isset($script_links) ) : ?>
+  	<?php foreach($script_links as $script_link): ?>
+		<?php echo js($script_link) ?>
+  	<?php endforeach ?>
+  <?php endif ?> 
 </head>
 <body>
