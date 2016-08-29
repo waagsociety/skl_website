@@ -125,10 +125,13 @@ function loadResourceOnMap(id) {
 				 //use someting for this ?? jsx 
 				 var div = document.createElement("div");
 				 var img = document.createElement("img");
-				 img.src = json.thumb_url 
+				 img.src = json.thumb_url; 
+				 div.appendChild(img);                   
+				 var a = document.createElement("a");
 				 var text = document.createTextNode(json.description);
-				 div.appendChild(text);
-				 div.appendChild(img)                   
+				 a.href = "/werkblad?resourceId=" + id;
+				 a.appendChild(text);  
+				 div.appendChild(a)
 				
 				 //add popup
 				 var popup = new mapboxgl.Popup().setLngLat([json.lon,json.lat]);
