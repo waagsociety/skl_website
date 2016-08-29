@@ -1,6 +1,16 @@
 var gMap = null;  
 
 document.addEventListener("DOMContentLoaded", function(event) {
+	             
+	if(!mapboxgl.supported())
+	{
+		alert("mapbox gl is not supported by this browser")
+	}
+	else
+	{
+		console.log("mapbox gl is supported!")
+	}
+	
 	loadMap();     
 }); 
 
