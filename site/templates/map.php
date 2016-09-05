@@ -6,7 +6,6 @@
 				"assets/js/main.min.js"
 			),
 			"style_links" => array ( 
-				"assets/css/main.css", 				  				  
 				"https://api.tiles.mapbox.com/mapbox-gl-js/v0.23.0/mapbox-gl.css", 
 				"https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v1.3.0/mapbox-gl-geocoder.css"
 			)
