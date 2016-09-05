@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	}
 	
 	loadMap();     
-}); 
+});  
 
 /*
 form in iframe is going to throw event when it's done
@@ -33,7 +33,9 @@ document.addEventListener("formDone", function(evt) {
 //initialize map and handlers
 function loadMap(){
   mapboxgl.accessToken = 'pk.eyJ1IjoibWFydGlud2FhZyIsImEiOiJjaWo0NWt6ZWYwMDE0dXlrcm0yenVkNDR5In0.0I9xJzLubP9g3V_NTt1PhA';
-  gMap = new mapboxgl.Map({
+  
+	//
+	gMap = new mapboxgl.Map({
     container: 'map', // container id
     style: 'mapbox://styles/martinwaag/cirx7ujxw003cgymgmwofw995', //stylesheet location
     center: [4.820902482840296, 52.3749057570665], // starting position
@@ -47,28 +49,39 @@ function loadMap(){
           
 	//add popup in iframe with image upload form
   gMap.on('click', function (e) {
-
-		//
-		var features = gMap.queryRenderedFeatures(e.point, { layers: ['meeting'] });
-		if(features.length == 0)
+               
+		if(e.originalEvent.target.tagName != "A")
 		{
-			//
-	    var popup = new mapboxgl.Popup().setLngLat(e.lngLat);  
-			var iframe = document.createElement("iframe");
+			var popup = new mapboxgl.Popup().setLngLat(e.lngLat);  
+			var iframe = document.createElement("iframe"); 
+			iframe.width = 640;
+      iframe.height = 480;
 			iframe.src = "form.html?lat=" + e.lngLat.lat + "&lng=" + e.lngLat.lng;
 	    popup.setDOMContent(iframe)
 	    popup.addTo(gMap);            
 		}
-		else
-		{          
+		//console.log("e", gMap._layers)
+		//return
+		//
+		//var features = gMap.queryRenderedFeatures(e.point, {});
+		//var features = gMap.queryRenderedFeatures(e.point, { layers: ['markers'] });
+		//if(features.length == 0)
+		//{
+			//
+		//}
+		//else
+		//{          
+			/*
 			for(var i=0;i<features.length;i++)
 			{             
 				 //get the resource_id of the clicked feature and load resource              
 				 loadResourceOnMap(features[i].properties.resource_id)
-			}
-		}
+			}*/
+		//}
 
 	});
+	
+	gMap.addControl(new mapboxgl.Geocoder());
 
 
        
@@ -90,7 +103,45 @@ function loadMapContent() {
 			})
 			.then(function(json){    
 				//remove existing source if there is one
-				if(gMap.getSource('meeting') != null)
+				
+				var geojson = json;
+				
+				geojson.features.forEach(function(marker) {
+				    
+						// create a DOM element for the marker
+				    var el = document.createElement('div');                  
+				  	var a = document.createElement("a");
+						var text = document.createTextNode(marker.properties.description);
+						a.href = "#";
+						a.appendChild(text);  
+						el.appendChild(a)
+				
+						//el.appendChild(document.createTextNode(marker.properties.description))
+					  
+					
+				    /*el.className = 'marker';
+				    el.style.backgroundImage = 'url(https://placekitten.com/g/' + marker.properties.iconSize.join('/') + '/)';
+				    el.style.width = marker.properties.iconSize[0] + 'px';
+				    el.style.height = marker.properties.iconSize[1] + 'px';*/
+
+				    el.addEventListener('click', function(m) { 
+                
+								loadResourceOnMap(marker.properties.resource_id)
+								m.preventDefault()
+				        //window.alert(marker.properties.message);
+				    });  
+				
+						new mapboxgl.Marker(el, {offset: [0, 0]})
+				        .setLngLat(marker.geometry.coordinates)
+				        .addTo(gMap);
+
+				    // add marker to map
+				    /*new mapboxgl.Marker(el, {offset: [-marker.properties.iconSize[0] / 2, -marker.properties.iconSize[1] / 2]})
+				        .setLngLat(marker.geometry.coordinates)
+				        .addTo(map);*/
+				});
+				
+				/*if(gMap.getSource('meeting') != null)
 				{
 					gMap.removeSource('meeting');
 				}
@@ -107,7 +158,7 @@ function loadMapContent() {
 		        "icon-image": "{icon}-15",
 		        "icon-allow-overlap": true
 		      }
-		    });
+		    });*/
 			})
 			.catch(function(ex) {
 				alert(ex)
@@ -117,8 +168,6 @@ function loadMapContent() {
 
 function loadResourceOnMap(id) {
 	                       
-	
-	
 	if(gMap != null)
 	{                    
 		var source = "/api/resource/" + id

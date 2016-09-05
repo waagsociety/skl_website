@@ -18,7 +18,7 @@ Dropzone.options.myAwesomeDropzone = {
 		  	warning.removeChild(warning.firstChild);
 		 	}
            
-			//
+			//a valid qr result means the picture was sharp
 			if(json.errors.length != 0) 
 			{
  			 	var warning = document.getElementById("image_quality_warning"); 
@@ -30,15 +30,20 @@ Dropzone.options.myAwesomeDropzone = {
 				var warning = document.getElementById("image_quality_warning"); 
 				warning.appendChild(document.createTextNode("Dit is een goede scherpe foto")) 
 				warning.style.backgroundColor = "green"
-			}     
+			}   
 			
+			//select the right werkblad by parsing the qr result
+			var url = document.createElement('a');
+			url.href = json.result.qr_code;  
+			var r = getQueryVariable(url, "werkblad")
+			document.querySelector(".werkblad select").value = r
 		});
 		this.on("error", function(file, resp) { 
 			/*setTimeout(function(){
 				this.removeFile(file);
 			}.bind(this), 1000);´*/
 		});
-		this.on("drop", function(file, resp) { 
+		this.on("addedfile", function(file, resp) {  //maxfilesreached?? how to respond to select
 			for(var i=0;i<this.files.length;i++)
 			{
 				if(this.files[i] == file)
@@ -47,6 +52,8 @@ Dropzone.options.myAwesomeDropzone = {
 				}                          
 				else
 				{
+					this.removeFile(this.files[i])
+					
 					console.log("this not")
 				}
 			}
@@ -65,8 +72,8 @@ Dropzone.options.myAwesomeDropzone = {
 document.addEventListener("DOMContentLoaded", function(event) {
 	
 	//get query params
-  var lat = parseFloat(getQueryVariable("lat"));
-  var lng = parseFloat(getQueryVariable("lng"));
+  var lat = parseFloat(getQueryVariable(window.location, "lat"));
+  var lng = parseFloat(getQueryVariable(window.location, "lng"));
 	document.getElementById("lat").value = lat;
 	document.getElementById("lon").value = lng;
                     
@@ -129,8 +136,8 @@ function submitForm() {
 	  })       
 }
 
-function getQueryVariable(variable) {
-  var query = window.location.search.substring(1);
+function getQueryVariable(url, variable) {
+  var query = url.search.substring(1);
   var vars = query.split("&");
   for (var i=0;i<vars.length;i++) {
          var pair = vars[i].split("=");

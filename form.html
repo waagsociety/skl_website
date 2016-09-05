@@ -21,7 +21,7 @@
 		      font-size: 1.625em;
 		      line-height: 1.0476190476190477;
 		      margin-bottom: 0.3em;
-		    }
+		    } 
 		</style>
 	</head>
 	<body>
@@ -41,7 +41,20 @@
 		  <input type="text" name="qr_code" id="qr-code" readonly/><br>
 		  <input type="text" name="lat" id="lat" readonly/><br>
 		  <input type="text" name="lon" id="lon" readonly/><br>
-		  <input type="submit" /><br>
+		  <select name="werkblad_type">
+		  	<option value="0">-- Kies je werkblad --</option>  
+			<option value="1">PH-meter</option>
+		  	<option value="2">Weerstandsmeter</option>
+		  	<option value="3">Lichtmeter</option>
+		  	<option value="4">Secchi schijf</option>
+		  	<option value="5">Microbenmeter</option>
+		  	<option value="6">Fijnstofmeter</option>
+		  	<option value="7">Kytemapping</option>
+			<option value="8">Gassenmeter</option>
+			<option value="9">UV-stralingsmeter</option>
+			<option value="10">Microscoop</option>
+		   </select>
+		   <input type="submit" /><br>
 		</form>
 	</body>
 </html>  
