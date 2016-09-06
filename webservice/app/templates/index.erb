@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<title>Uploads</title>
+	</head>
+	<body>
+		<section class="tableView">
+			<h1>Listing Entries</h1>
+			<table>
+		    	<thead>
+			      <tr>
+			      	<th>Name</th>
+			      </tr>
+			    </thead>
+			    <tbody>
+			      <% @entries.each do |entry| %>
+			        <tr>
+			          <td><%= entry[:id] %></td>
+					  <td><%= entry[:description] %></td>
+					  <td><a href="<%= entry[:link] %>">show</td>
+			        </tr>
+			      <% end %>
+			    </tbody>
+		  	</table>
+		</section>
+	</body>
+</html>
+

@@ -1,13 +1,21 @@
-<?php snippet('header') ?>
-<?php snippet('navigation') ?>
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.22.0/mapbox-gl.js'></script>
+<?php snippet('header', 
+		array (
+			"script_links" => array ( 
+				"http://api.tiles.mapbox.com/mapbox-gl-js/v0.23.0/mapbox-gl.js", 				  				  
+				"https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v1.3.0/mapbox-gl-geocoder.js", 
+				"assets/js/main.min.js"
+			),
+			"style_links" => array ( 
+				"https://api.tiles.mapbox.com/mapbox-gl-js/v0.23.0/mapbox-gl.css", 
+				"https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v1.3.0/mapbox-gl-geocoder.css"
+			)
+		)
+	)
+?>
 
-    <style>
-      .mapboxgl-popup {
-          max-width: 400px;
-          font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
-      }
-    </style>
+
+
+<?php snippet('navigation') ?>
 
 <div class="map__container flex">
   <div id="map"></div>

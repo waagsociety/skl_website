@@ -17,8 +17,10 @@ gulp.task('styles', function() {
 
 gulp.task('js', function() {
     gulp.src([
-      'src/js/vendors/dropzone.js',
-      'src/js/*.js'
+      'src/js/*.js',
+			'src/js/vendors/promise-polyfill.js',
+			'src/js/vendors/mapbox-gl-supported.js', 
+			'src/js/vendors/fetch.js'
     ])
     .pipe(babel({
         presets: ['es2015']
@@ -27,11 +29,27 @@ gulp.task('js', function() {
     .pipe( concat('main.min.js') )
     // .pipe(uglify())
     .pipe(gulp.dest('./assets/js'))
+});   
+
+gulp.task('js2', function() {
+    gulp.src([
+      'src/js/vendors/dropzone.js',
+			'src/js/vendors/html5-formdata-polyfill.js',
+			'src/js/vendors/promise-polyfill.js',
+			'src/js/vendors/fetch.js',
+			'src/js/iframe/iframe.js'			
+    ])
+    .pipe(babel({
+        presets: ['es2015']
+    }))
+    .pipe( concat('iframe.min.js') )
+    .pipe(gulp.dest('./assets/js'))
 });
+
 gulp.task('watch', function () {
     gulp.watch('src/styles/**/*.scss',['styles']);
     gulp.watch('src/js/*.js',['js']);
 });
 
-gulp.task('default', ['styles', 'js']);
+gulp.task('default', ['styles', 'js', 'js2']);
 gulp.task('start', ['watch']);

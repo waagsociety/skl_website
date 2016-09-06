@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<title>Resource</title>
+	</head>
+	<body>
+		<section class="tableView">
+			<h1>Showing resource  <%= @entry[:resource_id] %></h1>
+			<h3><%= @entry[:description] %></h3>  
+			<img width=800 src="<%= @entry[:image_url] %>" /> 
+			<form action="<%= @entry[:publish_unpublish_url] %>" method="post">
+				<input type="submit" value="<%= @entry[:publish_unpublish_label] %>">              
+			</from>
+		</section>
+	</body>
+</html>
+
+
+
+
+
+
