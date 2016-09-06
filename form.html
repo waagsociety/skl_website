@@ -5,7 +5,7 @@
 		<script type="text/javascript" src="assets/js/iframe.min.js"></script>
 		<script src="https://use.typekit.net/kzn1tml.js"></script>
 		<script>try{Typekit.load({ async: true });}catch(e){}</script>
-		<link rel="stylesheet" href="assets/css/dropzone.css">
+		<link rel="stylesheet" href="assets/css/main.css">
 		<style>
 		    * {
 		      font-family: 'fira-sans', sans-serif;
@@ -25,36 +25,40 @@
 		</style>
 	</head>
 	<body>
-		<h2 class="alpha">Voeg een foto van je werkblad toe</h2>
-	
-		<!-- add dropzone -->
-		<form action="/api/file_upload" class="dropzone" id="my-awesome-dropzone">
-		</form>           
-	     
-		<div style="color:#fff;" id="image_quality_warning"></div>
-	
-		<!-- add form for -->
-		<form class="werkblad">
-		  wie heeft deze meting gedaan : <input type="text" name="name" /><br>
-		  wat zijn je meet bevindingen : <input type="text" name="description" /><br>
-		  <input type="text" name="resource_id" id="resource-id" readonly/><br>
-		  <input type="text" name="qr_code" id="qr-code" readonly/><br>
-		  <input type="text" name="lat" id="lat" readonly/><br>
-		  <input type="text" name="lon" id="lon" readonly/><br>
-		  <select name="werkblad_type">
-		  	<option value="0">-- Kies je werkblad --</option>  
-			<option value="1">PH-meter</option>
-		  	<option value="2">Weerstandsmeter</option>
-		  	<option value="3">Lichtmeter</option>
-		  	<option value="4">Secchi schijf</option>
-		  	<option value="5">Microbenmeter</option>
-		  	<option value="6">Fijnstofmeter</option>
-		  	<option value="7">Kytemapping</option>
-			<option value="8">Gassenmeter</option>
-			<option value="9">UV-stralingsmeter</option>
-			<option value="10">Microscoop</option>
-		   </select>
-		   <input type="submit" /><br>
-		</form>
+	<div class="form__wrapper">
+			<h2 class="alpha poptitle">Voeg een foto van je werkblad toe</h2>
+		
+			<!-- add dropzone -->
+			<form action="/api/file_upload" class="dropzone" id="my-awesome-dropzone">
+			</form>           
+			<div id="image_quality_warning"></div>
+		
+			<!-- add form for -->
+			<form class="werkblad">
+			  <label>wie heeft deze meting gedaan</label>
+			  <input type="text" name="name" />
+			  <label>wat zijn je meet bevindingen</label>
+			  <input type="text" name="description" />
+			  
+			  <input type="hidden" name="resource_id" id="resource-id" readonly/>
+			  <input type="hidden" name="qr_code" id="qr-code" readonly/>
+			  <input type="hidden" name="lat" id="lat" readonly/>
+			  <input type="hidden" name="lon" id="lon" readonly/>
+			  <select name="werkblad_type">
+			  	<option value="0">-- Kies je werkblad --</option>  
+				<option value="1">PH-meter</option>
+			  	<option value="2">Weerstandsmeter</option>
+			  	<option value="3">Lichtmeter</option>
+			  	<option value="4">Secchi schijf</option>
+			  	<option value="5">Microbenmeter</option>
+			  	<option value="6">Fijnstofmeter</option>
+			  	<option value="7">Kytemapping</option>
+				<option value="8">Gassenmeter</option>
+				<option value="9">UV-stralingsmeter</option>
+				<option value="10">Microscoop</option>
+			   </select>
+			   <button type="submit" class="btn btn-1">Zet op de kaart!</button>
+			</form>
+		</div>
 	</body>
 </html>
