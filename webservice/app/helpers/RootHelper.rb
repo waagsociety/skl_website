@@ -22,5 +22,4 @@ module ApplicationHelper
     return data
   end
   
-  
 end

@@ -1,4 +1,4 @@
-var gMap = null;  
+var gMap = null;        
 
 document.addEventListener("DOMContentLoaded", function(event) {          
   if(!mapboxgl.supported()) {
@@ -74,20 +74,22 @@ function loadMapContent() {
       var geojson = json;
       
       geojson.features.forEach(function(marker) {
-          // create a DOM element for the marker
+          var icons = ["","ph", "weerstand", "light", "secchie", "microbes", "dust", "kite", "gas", "uv", "micros"];
+					
+
+					// create a DOM element for the marker
           var el = document.createElement('div');                  
           var a = document.createElement("a");
           var text = document.createTextNode(marker.properties.description);
-          a.href = "#";
+          a.className = "marker-icon " + icons[marker.properties.icon];
+					a.href = "#";
           a.appendChild(text);  
-          el.appendChild(a);
+					el.appendChild(a);
 
           el.addEventListener('click', function(m) { 
-            
             loadResourceOnMap(marker.properties.resource_id)
             m.preventDefault()
-              //window.alert(marker.properties.message);
-            });  
+          });  
           
           new mapboxgl.Marker(el, {offset: [0, 0]})
           .setLngLat(marker.geometry.coordinates)
@@ -117,7 +119,7 @@ function loadResourceOnMap(id) {
        var div = document.createElement("div");
        var img = document.createElement("img");   
        var a = document.createElement("a");
-
+                               
        img.src = json.thumb_url; 
 
        var text = document.createTextNode(json.description);

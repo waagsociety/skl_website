@@ -106,7 +106,7 @@ class ServiceController < ApplicationController
     upload_table = $DB[:upload].where(:published => 1)  
     upload_table.all.each { |upload|
       p = @@geo_factory.point(upload[:lon], upload[:lat]) 
-      props = {"resource_id" => upload[:resource_id], "icon" => "star", "description" => upload[:description]}
+      props = {"resource_id" => upload[:resource_id], "icon" => upload[:resource_type], "description" => upload[:description]}
       feature = @@entity_factory.feature(p, nil, props)  
       features.push(feature)
     }     
