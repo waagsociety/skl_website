@@ -3,20 +3,28 @@
   background-attachment: fixed;
   background-size: cover;
   font-size: 1.5em;
+  top: 75px;
   h1{
     margin-bottom: 0.3em;
   }
 }
-.tagline{
-  font-size: 2.625em;
-  color: white;
-  max-width: 17em;
-  transform: translateY(-50%);
-  left: $gutter * 4;
-  line-height: 1.3em;
-  z-index: 3;
+.introduction{
+  font-size: 1.2em;
+  div{
+    max-width: 700px;
+  }
+  h1{
+    font-size: 3em;
+    margin-bottom: 0;
+    line-height: 1;
+  }
 }
-
+.tagline{
+  font-size: 1.625em;
+}
+.introdescription{
+  font-size: .875em;
+}
 .svg__header{
   position: absolute;
   left: 0;
@@ -39,23 +47,5 @@
   }
   .rocket__line{
     stroke-width:0;
-  }
-}
-
-
-@media (min-width:320px) {
-  .tagline{
-    font-size: 1.625em;
-    top: 50%;
-    left: $gutter;
-  }
-}
-
-
-@media (min-width:1024px) {
-  .tagline{
-    font-size: 2.625em;
-    left: $gutter * 4;
-    top: 40%;
   }
 }

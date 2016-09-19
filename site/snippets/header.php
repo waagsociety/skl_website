@@ -9,17 +9,9 @@
   <meta name="author" content="Martin Risseeuw">
   <?php echo css('assets/css/main.css') ?>
   <?php snippet('favicons') ?>
+  <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
   <script src="https://use.typekit.net/kzn1tml.js"></script>
   <script>try{Typekit.load({ async: true });}catch(e){}</script>
-  <?php if ( isset($script_links) ) : ?>
-  	<?php foreach($script_links as $script_link): ?>
-		<?php echo js($script_link) ?>
-  	<?php endforeach ?>
-  <?php endif ?>
-  <?php if ( isset($style_links) ) : ?>
-  	<?php foreach($style_links as $style_link): ?>
-		<?php echo css($style_link) ?>
-  	<?php endforeach ?>
-  <?php endif ?>
+  
 </head>
 <body>

@@ -15,5 +15,4 @@
       <p>The data browser is a complete new graphical way of browsing metropolitan data.</p>
     </div>
   </div>
-  <a class="btn" href="<?php echo kirby()->urls()->index() ?>/information">More information</a>
 </section>

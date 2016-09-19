@@ -7,3 +7,11 @@ Text: Giet twee glazen water in de blender en voeg 4 blaadjes rodekool toe. Pure
 ----
 
 Infoimage: teaser.png
+
+----
+
+Category: air
+
+----
+
+Assignment: sound

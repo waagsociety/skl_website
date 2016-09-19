@@ -5,14 +5,55 @@
     font-size: 2.625em;
   }
 }
+
 .info__icon{
   margin-bottom: $gutter / 4;
 }
+.info__header{
+  margin-bottom: 1em;
+  display: flex;
+  align-items: center;
+  h2{
+    width: auto;
+    display: inline-block;
+  }
+}
+.text__block{
+  padding: 40px 80px;
+}
+.category-icon{
+  width: 100px;
+  height: 100px;
+  margin-left: 20px;
+  background-repeat: no-repeat;
+}
+.werkblad-icon{
+  width: 200px;
+  height: 200px;
+  margin-right: 20px;
+  background-repeat: no-repeat;
+}
 
+.sound { background-image: url(../images/icon_sound.svg); }
+.light { background-image: url(../images/icon_light.svg); }
+.dust { background-image: url(../images/icon_dust.svg); }
+.secchie { background-image: url(../images/icon_secchie.svg); }
+.kite { background-image: url(../images/icon_kite.svg); }
+.ph { background-image: url(../images/icon_ph.svg); }
+.uv { background-image: url(../images/icon_uv.svg); }
+.micros { background-image: url(../images/icon_micros.svg); }
+.weerstand { background-image: url(../images/icon_weerstand.svg); }
+.microbes { background-image: url(../images/icon_microbes.svg); }
+.gas { background-image: url(../images/icon_gas.svg); }
+.soil { background-image: url(../images/icon_soil.svg); }
+.sound_category { background-image: url(../images/icon_sound_category.svg); }
+.light_category { background-image: url(../images/icon_light_category.svg); }
+.water { background-image: url(../images/icon_water.svg); }
+.air { background-image: url(../images/icon_air.svg); }
 @media (min-width:320px) {
   .info__field{
     max-width: 300px;
-    margin: $gutter;
+    margin: $gutter / 2;
   }
 }
 

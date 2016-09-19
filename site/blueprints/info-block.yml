@@ -14,3 +14,27 @@ fields:
     mode:  single
     types:
         - image
+  category:
+    label: Category
+    type: radio
+    options:
+      soil: Soil
+      sound_category: Sound
+      light_category: Light
+      water: water
+      air: Air
+  assignment:
+    label: Assignment
+    type: radio
+    options:
+      sound: Sound
+      light: Light
+      dust: Dust
+      secchie: Secchie
+      kite: Kite
+      ph: PH
+      uv: UV
+      micros: Micros
+      weerstand: Weerstand
+      microbes: Microbes
+      gas: Gas

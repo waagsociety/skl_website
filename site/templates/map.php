@@ -1,23 +1,15 @@
-<?php snippet('header', 
-		array (
-			"script_links" => array ( 
-				"http://api.tiles.mapbox.com/mapbox-gl-js/v0.23.0/mapbox-gl.js", 				  				  
-				"https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v1.3.0/mapbox-gl-geocoder.js", 
-				"assets/js/main.min.js"
-			),
-			"style_links" => array ( 
-				"https://api.tiles.mapbox.com/mapbox-gl-js/v0.23.0/mapbox-gl.css", 
-				"https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v1.3.0/mapbox-gl-geocoder.css"
-			)
-		)
-	)
-?>
-
-
-
+<?php snippet('header') ?>
 <?php snippet('navigation') ?>
 
+
+<?php echo js('http://api.tiles.mapbox.com/mapbox-gl-js/v0.23.0/mapbox-gl.js') ?>
 <div class="map__container flex">
+  <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v1.3.0/mapbox-gl-geocoder.js'></script>
+  <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v1.3.0/mapbox-gl-geocoder.css' type='text/css' />
+  <figure id="fullscreenImageContainer" class="full__image__container">
+    <a id="closeimage" href="/resultaten">X</a>
+    <img id="fullscreenImage" class="full__image" src=""/>
+  </figure>
   <div id="map"></div>
   <div class="map__sidebar">
     <section>

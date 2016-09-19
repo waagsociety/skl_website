@@ -9,8 +9,15 @@ html{
 	-webkit-font-smoothing: antialiased;
 	-webkit-font-smoothing: subpixel-antialiased;
 }
-body{
-	font-family: 'Fira Sans', sans-serif;
+body {
+	font-family: 'Gloria Hallelujah', cursive;
+  font-size: 1.1em;
+}
+.mapboxgl-marker a{
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 1.4em;
+  text-shadow: 1px 1px 1px #fff;
+  color: #000;
 }
 h1, .alpha,
 h2, .beta,
@@ -21,6 +28,16 @@ h6, .zeta {
   margin: 0;
   letter-spacing: .01em;
   font-family: "blockhead-black-face";
+}
+#closeimage{
+  font-family: "blockhead-black-face";
+  color: white;
+  font-size: 5em;
+  display: block;
+  position: absolute;
+  right: 30px;
+  top: 20px;
+  line-height: 1;
 }
 h1, .alpha {
     font-size: 2.625em;
@@ -48,7 +65,7 @@ h6, .zeta {
 }
 p,
 blockquote {
-    font-size: 1.1125em;
+    font-size: 1.3125em;
     line-height: 1.05;
             hyphens: none;
 }

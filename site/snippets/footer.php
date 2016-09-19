@@ -1,4 +1,4 @@
     </div>
-    <?php snippet('svg') ?>
+    <?php echo js('assets/js/main.min.js') ?>
   </body>
 </html>

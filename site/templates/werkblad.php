@@ -2,14 +2,17 @@
 
 <?php snippet('navigation') ?>
 
-<div class="werkblad">
-	<p class="description"></p>
-	<p class="user"></p>
-	<img src=""/> 
-</div>     
+<main>
+	<div class="werkblad">
+		<p class="description"></p>
+		<p class="user"></p>
+		<figure class="full__image__container">
+			<img class="full__image" src=""/>
+		</figure>
+	</div>
+</main>
 
 <script type="text/javascript">
-
 	function getQueryVariable(variable) {
 	  var query = window.location.search.substring(1);
 	  var vars = query.split("&");
