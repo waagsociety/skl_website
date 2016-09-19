@@ -39,9 +39,9 @@ class ServiceController < ApplicationController
       picture_data = analyzeImage(tmp_file) 
       
       #rotate the image if needed       
-      uri = URI.parse(picture_data[:code])
-      if uri.host != nil && uri.host == "www.smartkidslab.nl" then
-        puts "found correct qr code"
+      host = URI.parse((picture_data[:code] rescue "")).host rescue nil
+      if host != "www.smartkidslab.nl" then
+        raise "QR code not found"
       end
       
       #generate resource id
