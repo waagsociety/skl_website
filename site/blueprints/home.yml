@@ -19,3 +19,9 @@ fields:
     mode:  single
     types:
         - image
+  pageicon:
+    label: Page icon
+    type:  selector
+    mode:  single
+    types:
+        - image

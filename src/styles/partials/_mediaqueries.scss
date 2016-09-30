@@ -17,6 +17,7 @@
     font-size: .875em;
     padding: 5px 10px;
   }
+
 }
 
 @media (min-width:481px) {
@@ -38,6 +39,10 @@
       margin-left: 40px;
     }
   }
+
+  .main__navigation__list__item a{
+    font-size: 28px;
+  }
   
 }
 
@@ -46,6 +51,7 @@
 }
 
 @media (min-width:1024px) {
+
   .half__width{
     width: 50%;
   }
@@ -74,8 +80,10 @@
  
 }
 
-@media (min-width:1281px) {
-  
+@media (min-width:1481px) {
+  .main__navigation__list__item a{
+    font-size: 48px;
+  }
 }
 
 @media (min-width:2000px) {

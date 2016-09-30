@@ -8,3 +8,9 @@ fields:
   text:
     label: Text
     type:  textarea
+  pageicon:
+    label: Page icon
+    type:  selector
+    mode:  single
+    types:
+        - image

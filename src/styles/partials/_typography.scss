@@ -1,3 +1,14 @@
+@font-face {
+  font-family: 'Sue Ellen Francisco';
+  src: url('../fonts/SueEllenFrancisco.eot');
+  src: url('../fonts/SueEllenFrancisco.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/SueEllenFrancisco.woff') format('woff'),
+    url('../fonts/SueEllenFrancisco.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 html{
   font-size: 100%;
 	-webkit-font-smoothing: antialiased;
@@ -8,15 +19,14 @@ html{
 	-moz-font-smoothing: antialiased;
 	-webkit-font-smoothing: antialiased;
 	-webkit-font-smoothing: subpixel-antialiased;
+  font-size: 100%;
 }
 body {
-	font-family: 'Gloria Hallelujah', cursive;
-  font-size: 1.1em;
+	font-family: 'Sue Ellen Francisco', cursive;
 }
 .mapboxgl-marker a{
-  font-family: 'Gloria Hallelujah', cursive;
-  font-size: 1.4em;
-  text-shadow: 1px 1px 1px #fff;
+  font-family: 'Sue Ellen Francisco', cursive;
+  font-size: 2em;
   color: #000;
 }
 h1, .alpha,

@@ -3,15 +3,20 @@
   background-attachment: fixed;
   background-size: cover;
   font-size: 1.5em;
-  top: 75px;
   h1{
     margin-bottom: 0.3em;
   }
 }
+.content__container{
+  padding: 4%;
+}
 .introduction{
+  padding: 100px 0;
   font-size: 1.2em;
-  div{
-    max-width: 700px;
+  .intro__inner{
+    max-width: 1000px;
+    max-width: 70%;
+    margin: auto;
   }
   h1{
     font-size: 3em;
@@ -19,11 +24,36 @@
     line-height: 1;
   }
 }
+.introdescription{
+  transform: rotate(1deg);
+}
+
+.big_logo{
+  background: url(../images/logo_big.svg);
+  width: 1040px;
+  padding-bottom: 30%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  z-index: 1;
+}
+
+.logo_text{
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -2;
+  opacity: 0;
+}
+
 .tagline{
   font-size: 1.625em;
 }
+
 .introdescription{
-  font-size: .875em;
+  font-size: 48px;
+  line-height: 1.4;
+  text-align: left;
 }
 .svg__header{
   position: absolute;
@@ -49,3 +79,45 @@
     stroke-width:0;
   }
 }
+
+.home__icon{
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding-bottom: 50%;
+  display: inline-block;
+  transition: .2s ease-out;
+  max-width: 556px;
+  &:hover{
+    transform: scale(1.02);
+  }
+}
+
+.meter__maken{
+  background-image: url(../images/maken.svg);
+}
+
+.meet__delen{
+  background-image: url(../images/delen.svg);
+}
+.wrapper{
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.decoration{
+  width: 257px;
+  padding-bottom: 11%;
+  max-width: 10% !important;
+  background-repeat: no-repeat;
+}
+.decoration.leftdec{
+  background-image: url(../images/home_decoration_1.svg);
+  align-self: flex-start;
+}
+
+.decoration.rightdec{
+  background-image: url(../images/home_decoration_2.svg);
+
+}
+

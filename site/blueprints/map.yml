@@ -1,6 +1,6 @@
 title: Map
 pages: false
-files: false
+files: true
 fields:
   title:
     label: Title
@@ -8,3 +8,9 @@ fields:
   text:
     label: Text
     type:  textarea
+  pageicon:
+    label: Page icon
+    type:  selector
+    mode:  single
+    types:
+        - image
