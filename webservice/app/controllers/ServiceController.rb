@@ -1,7 +1,8 @@
 require 'rgeo/geo_json' 
 require 'securerandom'
 require 'pathname'  
-require 'mime/types'
+require 'mime/types'  
+require "uri"
                           
 # CREATE TABLE upload (
 #   id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
@@ -29,19 +30,32 @@ class ServiceController < ApplicationController
       #params        
       name = params[:file][:name]
       filename = params[:file][:filename]   
-      tmp_file = params[:file][:tempfile]  
+      tmp_file = params[:file][:tempfile].path rescue nil  
     
+      #copy to public path  
+      puts "params : #{params}"          
+      
+      puts "file : #{params[:file]}"          
+      picture_data = analyzeImage(tmp_file) 
+      
+      #rotate the image if needed       
+      host = URI.parse((picture_data[:code] rescue "")).host rescue nil
+      if host != "www.smartkidslab.nl" then
+        raise "QR code not found"
+      end
+      
       #generate resource id
       resource_id = SecureRandom.hex(10) 
       response[:result][:resource_id] = resource_id
-                         
-      #copy to public path
+        
+      #write the image to the uploads folder, giving it an generated id
       dest_file = compilePathForResourceId resource_id, File.extname(tmp_file)                
-      FileUtils.cp(tmp_file, dest_file)
+      saveImage tmp_file, dest_file, 360 - picture_data[:rotation]
       
-      #try retrieve qr code
-      response[:result][:qr_code] = readQRCode resource_id  
-    rescue Exception => e
+      #result is found qr code
+      response[:result][:qr_code] = picture_data[:code]  
+    rescue Exception => e  
+      puts "errors #{e}"
       response[:errors].push e.to_s
     end
     
@@ -92,7 +106,7 @@ class ServiceController < ApplicationController
     upload_table = $DB[:upload].where(:published => 1)  
     upload_table.all.each { |upload|
       p = @@geo_factory.point(upload[:lon], upload[:lat]) 
-      props = {"resource_id" => upload[:resource_id], "icon" => "star", "description" => upload[:description]}
+      props = {"resource_id" => upload[:resource_id], "icon" => upload[:resource_type], "description" => upload[:description]}
       feature = @@entity_factory.feature(p, nil, props)  
       features.push(feature)
     }     
