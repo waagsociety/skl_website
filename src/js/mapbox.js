@@ -47,7 +47,7 @@ function loadMap(){
       var popup = new mapboxgl.Popup().setLngLat(e.lngLat);  
       var iframe = document.createElement("iframe"); 
       iframe.width = 640;
-      iframe.height = 338;
+      iframe.height = 358;
       iframe.src = "form.html?lat=" + e.lngLat.lat + "&lng=" + e.lngLat.lng;
       popup.setDOMContent(iframe)
       popup.addTo(gMap);            

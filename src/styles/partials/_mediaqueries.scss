@@ -1,4 +1,7 @@
 @media (min-width:320px) {
+  .werkblad-icon{
+    width: 100px;
+  }
   .half__width{
     width: 100%;
   }
@@ -68,6 +71,11 @@
       margin-left: 40px;
     }
   }  
+
+  .intro,
+  .info__header{
+    max-width: 330px;
+  }
 }
 
 @media (min-width:1024px) {
@@ -128,7 +136,7 @@
     font-size: .8em;
   }
   .information__block img{
-    max-width: 450px;
+    max-width: 400px;
   }
   .werkblad-icon,
   .category-icon,
@@ -151,6 +159,9 @@
 }
 
 @media (min-width:1700px) {
+  .intro{
+    max-width: none;
+  }
   .map__sidebar{
     font-size: .7em;
     width: 450px;
@@ -227,6 +238,9 @@
   }
   .information__block img{
     max-width: 600px;
+  }
+  .werkblad-icon{
+    width: 160px;
   }
 }
 
