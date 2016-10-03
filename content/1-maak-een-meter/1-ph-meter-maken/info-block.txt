@@ -1,4 +1,4 @@
-Title: PH Meter maken
+Title: PH Meter
 
 ----
 
@@ -6,7 +6,7 @@ Text: Giet twee glazen water in de blender en voeg 4 blaadjes rodekool toe. Pure
 
 ----
 
-Infoimage: teaser.png
+Infoimage: test4.png
 
 ----
 

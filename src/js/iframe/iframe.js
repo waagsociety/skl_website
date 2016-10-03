@@ -23,13 +23,13 @@ Dropzone.options.myAwesomeDropzone = {
 			{
  			 	var warning = document.getElementById("image_quality_warning"); 
 				warning.appendChild(document.createTextNode("Probeer een goede scherpe foto te maken waar het werkblad precies op past")) 
-				warning.style.backgroundColor = "red"
+				warning.style.color = "red"
 			} 
 			else 
 			{
 				var warning = document.getElementById("image_quality_warning"); 
 				warning.appendChild(document.createTextNode("Dit is een goede scherpe foto")) 
-				warning.style.backgroundColor = "green"
+				warning.style.color = "green"
 			}   
 			
 			//select the right werkblad by parsing the qr result

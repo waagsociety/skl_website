@@ -1,3 +1,26 @@
+#my-awesome-dropzone {
+    background: url(../images/drop.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
+}
+
+.dz-message{
+    opacity: 0;
+}
+.form__wrapper label,
+.form__wrapper button,
+.form__wrapper input,
+.form__wrapper select{
+    font-size: 1.4em;
+    margin-bottom: .3em;
+}
+#image_quality_warning{
+    font-size: 1.5em;
+    color: black;
+    background-color: transparent !important;
+    line-height: 1.5em;
+}
 /*
  * The MIT License
  * Copyright (c) 2012 Matias Meno <m@tias.me>
@@ -219,10 +242,10 @@ h2.poptitle{
     box-sizing: border-box;
 }
 .dropzone {
-    height: 150px;
-    border: 2px solid rgba(0, 0, 0, 0.3);
-    background: white;
-    padding: 20px 20px;
+    min-height: 150px;
+    // border: 2px solid rgba(0, 0, 0, 0.3);
+    // background: white;
+    // padding: 20px 20px;
 }
 .dropzone.dz-clickable {
     cursor: pointer;
@@ -279,7 +302,7 @@ h2.poptitle{
     transition: opacity 0.2s linear;
 }
 .dropzone .dz-preview .dz-remove {
-    font-size: 14px;
+    font-size: 20px;
     text-align: center;
     display: block;
     cursor: pointer;

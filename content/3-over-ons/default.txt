@@ -6,4 +6,4 @@ Text:
 
 ----
 
-Pageicon: map_icon.svg
+Pageicon: over.svg

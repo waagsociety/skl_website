@@ -13,17 +13,13 @@
   <div id="map"></div>
   <div class="map__sidebar">
     <section>
-      <h2 class="alpha">De kaart</h2>
-      <p>Op de kaart vind je allerlei verschillende metingen gedaan door andere kinderen. Zo zie jij wat bijvoorbeeld de lucht kwaliteit op verschillende scholen is.</p>
-    </section>
-    <section>
-      <h2 class="alpha">Meten is weten</h2>
-      <p>Wil je ook een meeting doen? Doe mee en kies een leuke meeting uit op de meting pagina! Kijk op de kaart wat jou leuk lijkt!</p>
-      <a href="#" class="btn">Zoek een opdracht</a>
-    </section>
-    <section>
-      <h2 class="alpga">Ik ben een meter</h2>
-      <p>Heb je wat gemeten? Upload hier jou meeting op de kaart. Klik op de plek waar je de meeting hebt gedaan en upload de foto van jou werkblad.</p>
+      <h2 class="alpha">Deel je meetresultaat</h2>
+      <p>Heb je een proefje gedaan met een zelfgemaakte meter? Hier zet je je resultaten op de GROTE DATAKAART.</p>
+      <header class="kaart__arrow"></header>
+      <p>KLIK op de plek waar je de metingen hebt gedaan en upload een foto van je ‘proefjes doen’ werkblad.</p>
+      <h2 class="alpga">BEKIJK wat er
+gemeten is!</h2>
+      <p>KLIK op de icoontjes op de kaart om de metingen van anderen te bekijken.</p>
     </section>
   </div>
 </div>

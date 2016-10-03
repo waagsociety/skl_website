@@ -19,7 +19,7 @@
   }
 }
 .text__block{
-  padding: 40px 80px;
+  padding: 40px;
 }
 .category-icon{
   width: 100px;
@@ -28,8 +28,8 @@
   background-repeat: no-repeat;
 }
 .werkblad-icon{
-  width: 200px;
-  height: 200px;
+  width: 160px;
+  height: 160px;
   margin-right: 20px;
   background-repeat: no-repeat;
 }
@@ -62,4 +62,23 @@
     max-width: 400px;
     margin: $gutter * 1.5;
   }
+}
+
+.download__icon{
+  display: inline-block;
+  width: 130px;
+  padding-bottom: 78px;
+  background-repeat: no-repeat;
+  background-image: url(../images/download.svg); 
+}
+
+.download__btn {
+  display: flex;
+  align-items: center;
+  font-size: 1.5em;
+  color: black;
+  text-transform: uppercase;
+}
+.infotje{
+  max-width: 700px;
 }

@@ -7,6 +7,8 @@ email: hello@martinr.nl
 language: en
 role: admin
 history:
+  - maak-een-meter/ph-meter-maken
+  - over-ons
   - maak-een-meter
   - resultaten
   - home
