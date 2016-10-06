@@ -1,4 +1,4 @@
-Title: Datahub
+Title: SmartKidsLab
 
 ----
 
@@ -6,12 +6,12 @@ Author: Martin Risseeuw at Waag Society
 
 ----
 
-Description: datahub is a new way of browsing data to boost your research
+Description: SmartKidsLab leert kinderen hoe ze hun omgeving kunnen meten met zelfgemaakte meters.
 
 ----
 
-Keywords: Datasets,Browser
+Keywords: Meten, omgeving
 
 ----
 
-Copyright: 
+Copyright:  Waag Society

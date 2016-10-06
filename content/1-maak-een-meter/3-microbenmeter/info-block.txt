@@ -1,0 +1,21 @@
+Title: Microbenmeter
+
+----
+
+Text: MICROBEN, de grond zit er vol mee! Dat is maar goed ook want op dode GROND kan niks groeien! Je kunt ze niet zien, maar wel in een POTJE gooien en meten. Want ze produceren STROOM!
+
+----
+
+Infoimage: image.png
+
+----
+
+Category: soil
+
+----
+
+Assignment: micros
+
+----
+
+Download: werkboek.pdf
