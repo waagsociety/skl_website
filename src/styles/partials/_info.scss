@@ -6,6 +6,16 @@
   }
 }
 
+.introduction.default{
+  align-items: initial;
+}
+.introdescription p{
+  max-width: none;
+  line-height: 1.5em;
+  font-size: 1em;
+  margin-bottom: 2em;
+}
+
 .info__icon{
   margin-bottom: $gutter / 4;
 }

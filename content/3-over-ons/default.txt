@@ -4,6 +4,10 @@ Title: Over ons
 
 Text: 
 
+SMART KIDS LAB wordt georganiseerd door WAAG SOCIETY, instituut voor kunst, wetenschap en technologie. Vanuit haar Smart Citizens Lab organiseert Waag Society, ondersteund door tal van partners, al een aantal jaren initiatieven die mensen in staat stelt hun leefomgeving in kaart te brengen. Dat doen we met VOLWASSENEN ÉN KINDEREN. Technologie wordt goedkoper, beter en breder beschikbaar en kan steeds beter antwoord geven op de vragen die leven in steden en buurten. Mensen krijgen hierdoor steeds meer regie over hun eigen leefomgeving. Dit kan ons, qua leeftijd, niet vroeg genoeg beginnen. Met Smart Kids Lab kunnen kinderen water, geluid, lucht, aarde en licht onderzoeken met zelfgemaakte meetinstrumenten. Het stelt kinderen in staat om met behulp van proefjes met de zelfgemaakte sensoren hun directe omgeving thuis en op school in kaart te brengen en te duiden. Zo komen ze op speelse wijze in aanraking met Citizen Science. Op deze website vind je de meetinstrumenten en uitleg waarmee je aan de slag kunt.
+ 
+Het Smart Kids Lab is onderdeel van het Europese programma Making Sense. Dit project kijkt hoe open beschikbare software, hardware, digitale maakpraktijken en open ontwerp ingezet kunnen worden om communities te helpen bij het begrijpen en in kaart brengen van hun leefomgeving. Vergelijkbare projecten worden vanuit dit project georganiseerd in Spanje en Kosovo en wetenschappelijk bestudeerd vanuit Schotland en België.
+
 ----
 
 Pageicon: over.svg

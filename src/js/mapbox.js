@@ -31,7 +31,8 @@ function loadMap(){
     container: 'map', // container id
     style: 'mapbox://styles/martinwaag/cirx7ujxw003cgymgmwofw995', //stylesheet location
     center: [4.820902482840296, 52.3749057570665], // starting position
-    zoom: 12 // starting zoom
+    zoom: 12, // starting zoom
+    minZoom: 12
   });
 
   gMap.addControl(new mapboxgl.Geocoder());
