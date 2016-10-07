@@ -2,7 +2,6 @@
   <div class="introduction full__width text__center flex flex__center">
     <div class="decoration leftdec"></div>
     <div class="intro__inner">
-      <div class="big_logo"></div>
       <div class="logo_text">
         <h1>Smart kids lab</h1>    
         <p class="tagline">Meters maken</p>

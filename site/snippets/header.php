@@ -12,6 +12,5 @@
   <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
   <script src="https://use.typekit.net/kzn1tml.js"></script>
   <script>try{Typekit.load({ async: true });}catch(e){}</script>
-  
 </head>
 <body>
