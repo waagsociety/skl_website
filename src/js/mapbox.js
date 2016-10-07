@@ -75,7 +75,7 @@ function loadMapContent() {
       var geojson = json;
       
       geojson.features.forEach(function(marker) {
-          var icons = ["","ph", "weerstand", "light", "secchie", "microbes", "dust", "kite", "gas", "uv", "micros"];
+          var icons = ["","ph", "weerstand", "light", "secchie", "microbes", "dust", "kite", "gas", "uv", "sound"];
 					
 
 					// create a DOM element for the marker
