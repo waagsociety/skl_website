@@ -2,7 +2,7 @@ Title: PH Meter asasa
 
 ----
 
-Text: Giet twee glazen water in de blender en voeg 4 blaadjes rodekool toe. Pureer deze zo fijn mogelijk, er mogen geen grote stukken meer te zien zijn.
+Text: Hoe ZUUR is het water? En de grond? Meet het zonder te proeven, magisch en MAKKELIJK: met RODEKOOLSAP! Ligt gewoon in de supermarkt op je te wachten....
 
 ----
 
@@ -14,4 +14,8 @@ Category: soil
 
 ----
 
-Assignment: secchie
+Assignment: ph          
+
+----
+
+Download: werkboek.pdf

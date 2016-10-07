@@ -1,0 +1,21 @@
+Title: Bodembedekkingmeter
+
+----
+
+Text: Wil je weten hoe de bodem bedekt is? Maak een luchtfoto met behulp van een vlieger.
+
+----
+
+Infoimage: image.png
+
+----
+
+Category: soil
+
+----
+
+Assignment: kite
+
+----
+
+Download: werkboek.pdf

@@ -38,17 +38,17 @@
 .light { background-image: url(../images/icon_light.svg); }
 .dust { background-image: url(../images/icon_dust.svg); }
 .secchie { background-image: url(../images/icon_secchie.svg); }
-.kite { background-image: url(../images/icon_kite.svg); }
+.kite { background-image: url(../images/icon_kite.svg);  }
 .ph { background-image: url(../images/icon_ph.svg); }
 .uv { background-image: url(../images/icon_uv.svg); }
 .micros { background-image: url(../images/icon_micros.svg); }
 .weerstand { background-image: url(../images/icon_weerstand.svg); }
 .microbes { background-image: url(../images/icon_microbes.svg); }
 .gas { background-image: url(../images/icon_gas.svg); }
-.soil { background-image: url(../images/icon_soil.svg); }
-.sound_category { background-image: url(../images/icon_sound_category.svg); }
-.light_category { background-image: url(../images/icon_light_category.svg); }
-.water { background-image: url(../images/icon_water.svg); }
+.soil { background-image: url(../images/icon_soil.svg); width:80px; height: 80px; }
+.sound_category { background-image: url(../images/icon_sound_category.svg); width:50px; height: 50px; }
+.light_category { background-image: url(../images/icon_light_category.svg);  }
+.water { background-image: url(../images/icon_water.svg); width:50px; height: 50px; }
 .air { background-image: url(../images/icon_air.svg); }
 @media (min-width:320px) {
   .info__field{
