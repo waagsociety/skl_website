@@ -1,4 +1,4 @@
-Title: PH Meter asasa
+Title: PH Meter
 
 ----
 
@@ -6,7 +6,7 @@ Text: Hoe ZUUR is het water? En de grond? Meet het zonder te proeven, magisch en
 
 ----
 
-Infoimage: teaser.png
+Infoimage: test4.png
 
 ----
 
