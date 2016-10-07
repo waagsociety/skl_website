@@ -1,4 +1,4 @@
-Title: PH Meter
+Title: PH Meter asasa
 
 ----
 
@@ -6,12 +6,12 @@ Text: Giet twee glazen water in de blender en voeg 4 blaadjes rodekool toe. Pure
 
 ----
 
-Infoimage: test4.png
+Infoimage: teaser.png
 
 ----
 
-Category: air
+Category: soil
 
 ----
 
-Assignment: sound
+Assignment: secchie

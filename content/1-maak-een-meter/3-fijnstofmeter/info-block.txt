@@ -1,0 +1,17 @@
+Title: Fijnstofmeter
+
+----
+
+Text: Hoeveel FIJNSTOF zweeft er in de LUCHT? Fijnstofdeeltjes zijn zóóóó klein dat je ze NIET ziet. Maar wel met een stuk melkkarton en vaseline... natuurlijk.
+
+----
+
+Infoimage: test4.png
+
+----
+
+Category: air
+
+----
+
+Assignment: dust

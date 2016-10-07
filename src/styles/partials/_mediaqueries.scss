@@ -12,8 +12,9 @@
   h1, .alpha{
     font-size: 1.625em;
   }
+
   .hero__header{
-    padding: 20px;
+    padding: 0 20px;
   }
   .btn, button{
     border: 2px solid black;
@@ -55,6 +56,15 @@
   .decoration{
     display: none;
   }
+  .main__navigation:after{
+    display: none;
+  }
+  .logo__list{
+    margin-right: 0;
+  }
+  .main__logo{
+    padding-bottom: 30%;
+  }
 }
 
 @media (min-width:600px) {
@@ -79,6 +89,16 @@
 }
 
 @media (min-width:1024px) {
+
+  .main__navigation:after{
+    display: block;
+  }
+  .main__logo{
+    padding-bottom: 15%;
+  }
+  .logo__list{
+    margin-right: 50px;
+  }
 
   .half__width{
     width: 50%;
@@ -246,4 +266,72 @@
 
 @media (min-width:2000px) {
   
+}
+
+
+
+@media (max-width:1280px) {
+  .introduction.default{
+    align-items: flex-start !important;
+  }
+  .introduction .intro__inner{
+    margin: 40px;
+  }
+  .half__width.home__icon{
+    width: 49%;
+  }
+  .introduction{
+    padding: 50px 0;
+  }
+  .introdescription{
+    font-size: 28px;
+  }
+  .mapboxgl-popup-content{
+    max-width: 600px;
+    iframe{
+      max-width: 400px;
+    }
+  }
+}
+
+@media (max-width:1000px) {
+  .main__navigation{
+    padding: 30px;
+  }
+  .half__width.home__icon{
+    width: 100%;
+  }
+  .introduction .intro__inner{
+    margin: 0;
+  }  
+}
+
+@media (max-width:1024px) {
+  .mapboxgl-popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    transform: none !important;
+    z-index: 9999;
+    background: white;
+  }
+  .mapboxgl-popup-anchor-top-left .mapboxgl-popup-tip{
+    display: none;
+  }
+  .mapboxgl-popup-content{
+    max-width: none;
+    height: 100%;
+    border: none;
+    iframe{
+      height: 100%;
+      width: 100% !important;
+      max-width: none !important;
+    }
+  }
+
+    .form__wrapper .left__col{
+      max-width: 250px;
+    }
 }
