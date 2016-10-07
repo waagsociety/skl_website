@@ -149,9 +149,6 @@
   .map__container{
     padding: 0;
   }
-  .map__sidebar{
-    padding: 0 40px 40px 80px;
-  }
   .infotje{
     font-size: .8em;
   }
@@ -165,16 +162,29 @@
   }
   .map__sidebar{
     font-size: .7em;
-    width: 360px;
+    width: 300px;
   }
   #map{
-    width: calc(100% - 360px);
+    width: calc(100% - 300px);
+  }
+  .map__sidebar{
+    padding: 0 40px 40px 40px;
   }
 }
 
 @media (min-width:1300px) {
   .main__navigation__list__item a{
     font-size: 32px;
+  }
+  .map__sidebar{
+    font-size: .7em;
+    width: 360px;
+  }
+  #map{
+    width: calc(100% - 360px);
+  }
+  .map__sidebar{
+    padding: 0 40px 40px 80px;
   }
 }
 
@@ -228,7 +238,7 @@
     font-size: 48px;
   }
   .introduction{
-    padding: 100px 0;
+    padding: 100px 0 0;
   }
   .introduction .intro__inner{
     max-width: 70%;
@@ -307,7 +317,7 @@
 }
 
 @media (max-width:1024px) {
-  
+
   .mapboxgl-popup{
     position: fixed;
     top: 0;
