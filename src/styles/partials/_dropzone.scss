@@ -2,7 +2,8 @@
     background: url(../images/drop.svg);
     background-size: contain;
     background-repeat: no-repeat;
-    border: none;
+    border: none; 
+	width:190px;
 }
 
 .dz-message{
@@ -292,7 +293,7 @@ h2.poptitle{
     opacity: 1;
 }
 .dropzone .dz-preview.dz-image-preview {
-    background: white;
+    background: transparent;
 }
 .dropzone .dz-preview.dz-image-preview .dz-details {
     -webkit-transition: opacity 0.2s linear;
@@ -364,14 +365,15 @@ h2.poptitle{
 .dropzone .dz-preview .dz-image {
     border-radius: 20px;
     overflow: hidden;
-    width: 120px;
-    height: 120px;
+    width: 139px;
+    height: 139px;
     position: relative;
     display: block;
-    z-index: 10;
+    z-index: 1000;
 }
 .dropzone .dz-preview .dz-image img {
     display: block;
+	width: 139px;
 }
 .dropzone .dz-preview.dz-success .dz-success-mark {
     -webkit-animation: passing-through 3s cubic-bezier(0.77, 0, 0.175, 1);

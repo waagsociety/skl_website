@@ -40,9 +40,6 @@ class ServiceController < ApplicationController
       
       #rotate the image if needed       
       host = URI.parse((picture_data[:code] rescue "")).host rescue nil
-      if host != "www.smartkidslab.nl" then
-        raise "QR code not found"
-      end
       
       #generate resource id
       resource_id = SecureRandom.hex(10) 
@@ -54,6 +51,12 @@ class ServiceController < ApplicationController
       
       #result is found qr code
       response[:result][:qr_code] = picture_data[:code]  
+      
+      #
+      if host != "www.smartkidslab.nl" then
+        response[:errors].push "QR code not found"
+      end
+    
     rescue Exception => e  
       puts "errors #{e}"
       response[:errors].push e.to_s

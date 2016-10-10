@@ -4,9 +4,11 @@ Title: Over ons
 
 Text: 
 
-SMART KIDS LAB is bedacht door WAAG SOCIETY. Met Smart Kids Lab kunnen kinderen water, geluid, lucht, aarde en licht onderzoeken met zelfgemaakte meetinstrumenten. Het stelt kinderen in staat om met behulp van proefjes met de zelfgemaakte sensoren hun directe omgeving thuis en op school in kaart te brengen en te duiden. Zo komen ze op speelse wijze in aanraking met de mogelijkheden van technologie en wetenschap.
+SMART KIDS LAB is bedacht door WAAG SOCIETY. Met Smart Kids Lab kunnen kinderen water, geluid, lucht, aarde en licht onderzoeken met zelfgemaakte meetinstrumenten. Het stelt kinderen in staat om met behulp van proefjes met de zelfgemaakte sensoren hun directe omgeving thuis en op school in kaart te brengen en te duiden. Zo komen ze op speelse wijze in aanraking met de mogelijkheden van technologie en wetenschap. 
 
-Smart Kids Lab had nooit gerealiseerd kunnen worden zonder de bijdrage van Cinekid en het RIVM. Het project maakt onderdeel uit van een Europees programma: MAKING SENSE. 
+Meedoen aan Smart Kids Lab kan thuis, maar ook op school. De Amsterdamse scholen Montessorischool De Regenboog in Zuid-Oost, De Sint Janschool in West en 11de Montessorischool Boven 't IJ zijn pilotscholen en MAKEN met hun groepen 8 alle METERS en doen metingen in de buurt van hun school.  
+
+Smart Kids Lab is ontwikkeld in samenwerking met Cinekid en het RIVM en is gerealiseerd met bijdragen van Stichting Cultuur en Educatie en het Horizon 2020 research en innovatieprogramma van de EU. Het project maakt onderdeel uit van een Europees programma: MAKING SENSE. 
 
 In <a href="http://waag.org/nl/project/making-sense
 " style="color:black;text-decoration:underline;">MAKING SENSE</a> wordt er onderzocht hoe open beschikbare software, hardware, en open ontwerp methodes ingezet kunnen worden om mensen te helpen bij het begrijpen en in kaart brengen van hun leefomgeving. Vergelijkbare projecten worden vanuit dit project georganiseerd in Spanje en Kosovo en wetenschappelijk bestudeerd vanuit Schotland en België.
