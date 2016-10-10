@@ -1,7 +1,7 @@
 <?php snippet('header') ?>
 <?php snippet('navigation') ?>
 
-
+<?php echo js('assets/js/main.min.js') ?>
 <?php echo js('http://api.tiles.mapbox.com/mapbox-gl-js/v0.23.0/mapbox-gl.js') ?>
 <div class="map__container flex">
   <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v1.3.0/mapbox-gl-geocoder.js'></script>
@@ -22,5 +22,6 @@ gemeten is!</h2>
       <p>KLIK op de icoontjes op de kaart om de metingen van anderen te bekijken.</p>
     </section>
   </div>
-</div>
+</div>   
+
 <?php snippet('footer') ?>
