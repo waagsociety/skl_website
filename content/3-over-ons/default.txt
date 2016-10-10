@@ -4,9 +4,19 @@ Title: Over ons
 
 Text: 
 
-SMART KIDS LAB wordt georganiseerd door WAAG SOCIETY, instituut voor kunst, wetenschap en technologie. Vanuit haar Smart Citizens Lab organiseert Waag Society, ondersteund door tal van partners, al een aantal jaren initiatieven die mensen in staat stelt hun leefomgeving in kaart te brengen. Dat doen we met VOLWASSENEN ÉN KINDEREN. Technologie wordt goedkoper, beter en breder beschikbaar en kan steeds beter antwoord geven op de vragen die leven in steden en buurten. Mensen krijgen hierdoor steeds meer regie over hun eigen leefomgeving. Dit kan ons, qua leeftijd, niet vroeg genoeg beginnen. Met Smart Kids Lab kunnen kinderen water, geluid, lucht, aarde en licht onderzoeken met zelfgemaakte meetinstrumenten. Het stelt kinderen in staat om met behulp van proefjes met de zelfgemaakte sensoren hun directe omgeving thuis en op school in kaart te brengen en te duiden. Zo komen ze op speelse wijze in aanraking met Citizen Science. Op deze website vind je de meetinstrumenten en uitleg waarmee je aan de slag kunt.
- 
-Het Smart Kids Lab is onderdeel van het Europese programma Making Sense. Dit project kijkt hoe open beschikbare software, hardware, digitale maakpraktijken en open ontwerp ingezet kunnen worden om communities te helpen bij het begrijpen en in kaart brengen van hun leefomgeving. Vergelijkbare projecten worden vanuit dit project georganiseerd in Spanje en Kosovo en wetenschappelijk bestudeerd vanuit Schotland en België.
+SMART KIDS LAB is bedacht door WAAG SOCIETY. Met Smart Kids Lab kunnen kinderen water, geluid, lucht, aarde en licht onderzoeken met zelfgemaakte meetinstrumenten. Het stelt kinderen in staat om met behulp van proefjes met de zelfgemaakte sensoren hun directe omgeving thuis en op school in kaart te brengen en te duiden. Zo komen ze op speelse wijze in aanraking met de mogelijkheden van technologie en wetenschap.
+
+Smart Kids Lab had nooit gerealiseerd kunnen worden zonder de bijdrage van Cinekid en het RIVM. Het project maakt onderdeel uit van een Europees programma: MAKING SENSE. 
+
+In <a href="http://waag.org/nl/project/making-sense
+" style="color:black;text-decoration:underline;">MAKING SENSE</a> wordt er onderzocht hoe open beschikbare software, hardware, en open ontwerp methodes ingezet kunnen worden om mensen te helpen bij het begrijpen en in kaart brengen van hun leefomgeving. Vergelijkbare projecten worden vanuit dit project georganiseerd in Spanje en Kosovo en wetenschappelijk bestudeerd vanuit Schotland en België.
+
+<a href="http://www.waag.org" style="color:black;text-decoration:underline;">WAAG SOCIETY</a> is een pionier op het gebied van digitale media.
+Zij verkent opkomende technologieën en geeft kunst en cultuur een doorslaggevende rol bij het ontwerpen van betekenisvolle toepassingen. Hierbij zoekt zij voortdurend actief de maatschappelijke context op.
+
+<a href="http://www.cinekid.nl/" style="color:black;text-decoration:underline;">CINEKID</a> is een organisatie die het hele jaar door activiteiten ontplooit op het gebied van film, televisie en nieuwe media voor kinderen. Jaarlijks organiseert CINEKID een groot festival in de herfstvakantie.
+                           
+<a href="http://www.rivm.nl" style="color:black;text-decoration:underline;">RIVM</a> is het Rijksinstituut voor Volksgezondheid en Milieu. Het bevordert de publieke gezondheid en een schoon en veilig leefmilieu.
 
 ----
 
