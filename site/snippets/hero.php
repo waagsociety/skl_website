@@ -5,14 +5,12 @@
 	</div>
                          
   		<div class="wrapper">
-	 		<a href="/maak-een-meter" ><img class="hero-image" style="float:left;" src="/assets/images/maken.svg"/></a>
-			<a href="/resultaten" ><img class="hero-image" style="float:right;" src="/assets/images/delen.svg"/></a>
-	    <!--<a href="/maak-een-meter" class="half__width home__icon meter__maken"></a>
-	    <a href="/resultaten" class="half__width home__icon meet__delen"></a>-->
+	 		<a href="/maak-een-meter"><img class="hero-image" style="" src="/assets/images/maken.svg"/></a>
+			<a href="/resultaten" ><img class="hero-image" style="" src="/assets/images/delen.svg"/></a>
 		</div> 
 	
 	<div class="introduction full__width text__center flex flex__center"> 
-		<p style="float:left;" class="introdescription"><br>Hoe schoon is de LUCHT die je inademt? Waarom is zwemWATER geen drinkwater? Zitten er veel of weinig microben in de GROND? En wat betekent dat? Ontdek hoe gezond jouw buurt is en wat je zelf kan doen om hem te verbeteren. <br><br> HOE WERKT HET? Kies wat je wilt gaan onderzoeken <a style="color: black;text-decoration:underline;" href="/maak-een-meter">MAAK EEN METER</a> en ga aan de slag.
+		<p class="introdescription"><br>Hoe schoon is de LUCHT die je inademt? Waarom is zwemWATER geen drinkwater? Zitten er veel of weinig microben in de GROND? En wat betekent dat? Ontdek hoe gezond jouw buurt is en wat je zelf kan doen om hem te verbeteren. <br><br> HOE WERKT HET? Kies wat je wilt gaan onderzoeken <a style="color: black;text-decoration:underline;" href="/maak-een-meter">MAAK EEN METER</a> en ga aan de slag.
 	   </p>
 	</div>                                                                                                 
 </header>
