@@ -3,6 +3,6 @@
   <li class="item"><a href="http://making-sense.eu/"><img src="<?php echo url('assets/images/logo_makingsense.svg') ?>" /></a></li>
   <li class="item"><a href="https://waag.org"><img src="<?php echo url('assets/images/logo_waag.svg') ?>" /></a></li>
   <li class="item"><a href="https://www.cinekid.nl/"><img src="<?php echo url('assets/images/logo_cinekid.svg') ?>" /></a></li>
-  <li class="item"><a href="http://stichtingsec.nl/?lang=en"><img src="<?php echo url('assets/images/logo_sec.svg') ?>" /></a></li>
+  <li class="item"><a href="http://stichtingsec.nl/"><img src="<?php echo url('assets/images/logo_sec.svg') ?>" /></a></li>
   <li class="item"><a href="http://www.rivm.nl/"><img src="<?php echo url('assets/images/logo_rivm.svg') ?>" /></a></li>
 </ul>

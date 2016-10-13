@@ -4,7 +4,8 @@
   margin: auto;
   align-items: center;
   padding: 100px 0;
-  li {
+  li {       
+	margin: 0 auto;
     width: 400px;
     height: auto;
     transition: transform .15s ease-out, opacity .15s ease-out;

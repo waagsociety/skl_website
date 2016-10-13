@@ -18,7 +18,9 @@ Zij verkent opkomende technologieën en geeft kunst en cultuur een doorslaggeven
 
 <a href="http://www.cinekid.nl/" style="color:black;text-decoration:underline;">CINEKID</a> is een organisatie die het hele jaar door activiteiten ontplooit op het gebied van film, televisie en nieuwe media voor kinderen. Jaarlijks organiseert CINEKID een groot festival in de herfstvakantie.
                            
-<a href="http://www.rivm.nl" style="color:black;text-decoration:underline;">RIVM</a> is het Rijksinstituut voor Volksgezondheid en Milieu. Het bevordert de publieke gezondheid en een schoon en veilig leefmilieu.
+<a href="http://www.rivm.nl" style="color:black;text-decoration:underline;">RIVM</a> is het Rijksinstituut voor Volksgezondheid en Milieu. Het bevordert de publieke gezondheid en een schoon en veilig leefmilieu.     
+
+<img src="/assets/images/team2.svg" style="display:block;margin:0 auto;" />
 
 ----
 
