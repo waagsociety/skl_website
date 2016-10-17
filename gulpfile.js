@@ -19,7 +19,6 @@ gulp.task('js', function() {
     gulp.src([
       'src/js/*.js',
 			'src/js/vendors/promise-polyfill.js',
-			'src/js/vendors/mapbox-gl-supported.js', 
 			'src/js/vendors/fetch.js'
     ])
     .pipe(babel({

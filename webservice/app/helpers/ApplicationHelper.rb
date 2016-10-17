@@ -121,7 +121,7 @@ def analyzeImage path
   rotation = 0         
   code = nil
   
-  rects = [[w2,0,w2,h2],[w2,h2,w2,h2],[0,h2,w2,h2],[0,0,w2,h2]] #tr,br,bl,tl
+  rects = [[w2,h2,w2,h2],[0,h2,w2,h2],[0,0,w2,h2],[w2,0,w2,h2]] #br,bl,tl,tr
   rects.each_with_index do |r,i| 
     crop = img.crop(*r)
     tmp = File.join(Dir.tmpdir(),"q#{i}") 

@@ -13,15 +13,32 @@ document.addEventListener("DOMContentLoaded", function(event) {
 form in iframe is going to throw event when it's done
 */                                   
 document.addEventListener("formDone", function(evt) {
-  //remove popups
-  var popups = document.querySelectorAll(".mapboxgl-popup")
-  for(var i=0;i<popups.length;i++) {
-    popups[i].parentNode.removeChild(popups[i]);
-  }
+  
+	//remove popups
+  removePopups();
  
   //reload markers
   loadMapContent();
-});  
+
+});
+
+function removePopups() {
+	var didRemove = false;
+	
+	var popups = document.querySelectorAll(".mapboxgl-popup")
+  for(var i=0;i<popups.length;i++) {
+    popups[i].parentNode.removeChild(popups[i]);
+    didRemove = true;
+  } 
+
+  var others = document.querySelectorAll(".fullscreen-form")
+  for(var i=0;i<others.length;i++) {
+    others[i].parentNode.removeChild(others[i]);
+    didRemove = true;
+  }                
+  
+  return didRemove;
+}  
 
 //initialize map and handlers
 function loadMap(){
@@ -30,10 +47,12 @@ function loadMap(){
   gMap = new mapboxgl.Map({
     container: 'map', // container id
     style: 'mapbox://styles/martinwaag/cirx7ujxw003cgymgmwofw995', //stylesheet location
-    center: [4.820902482840296, 52.3749057570665], // starting position
+    center: [4.90, 52.37], // starting position
     zoom: 12, // starting zoom
-    minZoom: 12
-  });
+    minZoom: 6
+  });            
+
+	gMap.addControl(new mapboxgl.NavigationControl());
 
   gMap.addControl(new mapboxgl.Geocoder());
   
@@ -44,22 +63,54 @@ function loadMap(){
   
   //add popup in iframe with image upload form
   gMap.on('click', function (e) {           
-    if(e.originalEvent.target.tagName != "A") {
-      var popup = new mapboxgl.Popup().setLngLat(e.lngLat);  
+    
+		var didRemove = removePopups();  
+		if(didRemove) { return; }
+		
+		if(e.originalEvent.target.tagName != "A") 
+		{
+      
       var iframe = document.createElement("iframe"); 
-      iframe.width = 640;
-      iframe.height = 358;
       iframe.src = "form.html?lat=" + e.lngLat.lat + "&lng=" + e.lngLat.lng;
-      popup.setDOMContent(iframe)
-      popup.addTo(gMap);            
-    }
+		
+			if(document.body.clientWidth > 1000)
+			{
+				var popup = new mapboxgl.Popup().setLngLat(e.lngLat);  
+	      popup.setDOMContent(iframe)
+	      popup.addTo(gMap); 
+        
+				//add extra class to make form distinct from preview popup
+				var pop = document.querySelector(".mapboxgl-popup");
+				pop.className = pop.className + " form-popup";  
+			
+				//capitalize the close button X, does not work in CSS
+				var button = document.querySelector(".mapboxgl-popup button");  
+				button.innerHTML = "X"            
+			}
+			else
+			{
+				 var fullScreenDiv = document.createElement("div") 
+				 var closeButton = document.createElement("button")
+				 closeButton.appendChild(document.createTextNode("X")) 
+				 closeButton.className = "mapboxgl-popup-close-button";
+				 closeButton.onclick = function() {
+					 removePopups();
+				 };
+				 fullScreenDiv.appendChild(closeButton)
+				 fullScreenDiv.appendChild(iframe)
+				 document.body.appendChild(fullScreenDiv)
+				 fullScreenDiv.className = "fullscreen-form"  
+				 //document.body.scrollTop = 0; //scroll to top
+				 window.scrollTo(0, 0);
+			}
+		}                      
   });    
 }   
 
 //update map content
 function loadMapContent() {
-
-  if(gMap != null)
+                      
+	if(gMap != null)
   {
     var source = "/api/markers"
     window.fetch(source)
@@ -77,7 +128,6 @@ function loadMapContent() {
       geojson.features.forEach(function(marker) {
           var icons = ["","ph", "weerstand", "light", "secchie", "microbes", "dust", "kite", "gas", "uv", "sound"];
 					
-
 					// create a DOM element for the marker
           var el = document.createElement('div');                  
           var a = document.createElement("a");
@@ -104,7 +154,10 @@ function loadMapContent() {
 }
 
 function loadResourceOnMap(id) {
-  if(gMap != null)
+  
+	removePopups();
+
+	if(gMap != null)
   {                    
     var source = "/api/resource/" + id
     window.fetch(source)
@@ -147,8 +200,16 @@ function loadResourceOnMap(id) {
       
        //add popup
        var popup = new mapboxgl.Popup().setLngLat([json.lon,json.lat]);
-       popup.setDOMContent(div)
+			 popup.setDOMContent(div);
        popup.addTo(gMap);          
+			
+			 //add extra class to make preview distinct from form popup
+			 var pop = document.querySelector(".mapboxgl-popup");
+			 pop.className = pop.className + " preview-popup";   
+			                      
+			 //capitalize the close button X, does not work in CSS
+			 var button = document.querySelector(".mapboxgl-popup button");  
+			 button.innerHTML = "X"
     })
     .catch(function(ex) {
       alert(ex)
