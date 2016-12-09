@@ -19,8 +19,12 @@ Zij verkent opkomende technologieën en geeft kunst en cultuur een doorslaggeven
 <a href="http://www.cinekid.nl/" style="color:black;text-decoration:underline;">CINEKID</a> is een organisatie die het hele jaar door activiteiten ontplooit op het gebied van film, televisie en nieuwe media voor kinderen. Jaarlijks organiseert CINEKID een groot festival in de herfstvakantie.
                            
 <a href="http://www.rivm.nl" style="color:black;text-decoration:underline;">RIVM</a> is het Rijksinstituut voor Volksgezondheid en Milieu. Het bevordert de publieke gezondheid en een schoon en veilig leefmilieu.     
-
 <img src="/assets/images/team2.svg" style="display:block;margin:0 auto;" />
+ 
+     
+Based on/ with many thanks:
+       
+<a href="https://publiclab.org" style="color:black;text-decoration:underline;display: inline-block">Public Lab (Kytemapping)</a>&nbsp;&nbsp;<a href="http://www.kerismith.com" style="color:black;text-decoration:underline;display: inline-block">Keri Smith</a>&nbsp;&nbsp;<a href="http://willemwever.kro-ncrv.nl" style="color:black;text-decoration:underline;display: inline-block">Willem Wever</a>&nbsp;&nbsp;<a href="http://www.hetklokhuis.nl" style="color:black;text-decoration:underline;display: inline-block">Het Klokhuis</a>&nbsp;&nbsp;<a href="https://www.wikipedia.org" style="color:black;text-decoration:underline;display: inline-block">Wikipedia</a>&nbsp;&nbsp;<a href="http://www.thefartfacts.com " style="color:black;text-decoration:underline;display: inline-block">The fart facts</a>&nbsp;&nbsp;<a href="http://www.who.int/" style="color:black;text-decoration:underline;display: inline-block">World Health Organization</a>&nbsp;&nbsp;<a href="http://www.groenblauwenetwerken.com" style="color:black;text-decoration:underline;display: inline-block">GROENBLAUW</a>&nbsp;&nbsp;<a href="http://www.micropia.nl" style="color:black;text-decoration:underline;display: inline-block">Artis Micropia</a>
 
 ----
 
