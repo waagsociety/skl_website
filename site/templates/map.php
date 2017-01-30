@@ -1,12 +1,21 @@
-<?php snippet('header') ?>
+<?php                 
+	$s = array(
+		"script_links" => array(
+			"assets/js/main.min.js",
+			"http://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-supported/v1.2.0/mapbox-gl-supported.js",
+			"http://api.tiles.mapbox.com/mapbox-gl-js/v0.26.0/mapbox-gl.js",
+			"http://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v1.3.0/mapbox-gl-geocoder.js"
+		),
+		"style_links" => array(
+			"https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v1.3.0/mapbox-gl-geocoder.css"
+		)
+	);    
+	snippet('header', $s);
+	/*snippet('header')*/    
+?>
 <?php snippet('navigation') ?>
 
-<?php echo js('assets/js/main.min.js') ?>
-<?php echo js('http://api.tiles.mapbox.com/mapbox-gl-js/v0.26.0/mapbox-gl.js') ?>
-<?php echo js('http://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-supported/v1.2.0/mapbox-gl-supported.js') ?>
-<?php echo js('http://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v1.3.0/mapbox-gl-geocoder.js') ?>
 <div class="map__container flex">
-  <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v1.3.0/mapbox-gl-geocoder.css' type='text/css' />
   <figure id="fullscreenImageContainer" class="full__image__container">
     <a id="closeimage" href="/resultaten">X</a>
     <img id="fullscreenImage" class="full__image" src=""/>
