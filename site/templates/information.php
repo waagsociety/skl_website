@@ -1,6 +1,11 @@
 <?php snippet('header') ?>
 <?php snippet('navigation') ?>
-  <main class="main">
+  <main class="main">     
+	<?php if(!empty($page->text())): ?>
+		<?php echo $page->text()->kirbytext() ?> 
+	<?php endif; ?>
+	
+	
     <?php foreach($page->children()->visible() as $info): ?>
         <div class="information__block flex flex__wrap flex__center">
           <figure class="full__height half__width flex flex__center">

@@ -1,0 +1,21 @@
+Title: Acid meter
+
+----
+
+Text: Hoe ACIDIC is the water? And how about soil? Examine the acidity of the soil or water in your area using some magical RED CABBAGE
+
+----
+
+Infoimage: test4.png
+
+----
+
+Category: soil
+
+----
+
+Assignment: ph          
+
+----
+
+Download: SmartKidsLab_Zuurmeter.pdf

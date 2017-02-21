@@ -107,6 +107,23 @@
 
 .hero-image {
   width:400px;
+}     
+
+.hero-stamp-hook {
+  display:flex;
+  position:relative;
+  width:0px;
+  height:0px;
+  background-color:red;
+}                      
+
+.hero-stamp-hook img {
+  width:120px;
+  transform: rotate(7deg);
+  left:150px;
+  z-index:1;   
+  position:absolute;
+  max-width:none;   
 }
 
 .decoration{

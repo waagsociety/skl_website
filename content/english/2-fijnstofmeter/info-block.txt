@@ -1,0 +1,21 @@
+Title: Particulates meter
+
+----
+
+Text: Let’s examine how much PARTICULATE MATTER is in the air. Tiny particles are floating in the air. We do not see them, but breathe them every day. Make a simple measuring device using a MILK CARTON and VASELINE 
+
+----
+
+Infoimage: image.png
+
+----
+
+Category: air
+
+----
+
+Assignment: dust
+
+----
+
+Download: SmartKidsLab_Fijnstofmeter.pdf
