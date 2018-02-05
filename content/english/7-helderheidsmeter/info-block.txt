@@ -1,0 +1,21 @@
+Title: Water clarity meter
+
+----
+
+Text: If water doesn’t let through enough light, it becomes difficult for plants and animals to live in. Build your own water clarity meter using an old record (LP, ask granddad!) and a piece of rope.
+
+----
+
+Infoimage: image.png
+
+----
+
+Category: water
+
+----
+
+Assignment: secchie
+
+----
+
+Download: SmartKidsLab-Measure-water-clarity.pdf

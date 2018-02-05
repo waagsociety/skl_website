@@ -1,0 +1,21 @@
+Title: Noise meter
+
+----
+
+Text: Investigate NOISE POLLUTION in your area. Where is it QUIET and where is it TOO LOUD? Is the screaming on the playground too noisy? Maybe it’s your sister’s violin lesson? Use a simple smartphone APP to measure it.
+
+----
+
+Infoimage: image.png
+
+----
+
+Category: sound_category
+
+----
+
+Assignment: sound
+
+----
+
+Download: SmartKidsLab-Measure-noise.pdf

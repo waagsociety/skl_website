@@ -1,0 +1,21 @@
+Title: UV-radiation meter
+
+----
+
+Text: The sun is our friend, but some of its LIGHT can’t be seen with the human eye . For example, ultraviolet light (UV radiation) which, by the way, is NOT GOOD for humans. Use a chemistry experiment to reveal invisible light. 
+
+----
+
+Infoimage: image.png
+
+----
+
+Category: air
+
+----
+
+Assignment: uv
+
+----
+
+Download: SmartKidsLab-Measure-UV-radiation.pdf

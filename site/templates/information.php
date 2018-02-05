@@ -1,11 +1,16 @@
 <?php snippet('header') ?>
 <?php snippet('navigation') ?>
-  <main class="main">     
-	<?php if(!empty($page->text())): ?>
-		<?php echo $page->text()->kirbytext() ?> 
-	<?php endif; ?>
-	
-	
+
+    <main class="main">
+
+    <?php if($page->slug() == "maak-een-meter"): ?>
+      <a href="/english"><img src="/assets/images/english.svg" style="float:right;position:relative;top:-30px;"/></a>
+    <?php endif; ?>
+
+    <?php if(!empty($page->text())): ?>
+		   <?php echo $page->text()->kirbytext() ?>
+	  <?php endif; ?>
+
     <?php foreach($page->children()->visible() as $info): ?>
         <div class="information__block flex flex__wrap flex__center">
           <figure class="full__height half__width flex flex__center">
@@ -14,7 +19,7 @@
           <div class="half__width text__block flex flex__center infotje">
             <div>
                 <div class="werkblad-icon <?php echo $info->assignment() ?>"></div>
-             
+
             </div>
             <div>
               <header class="flex info__header">

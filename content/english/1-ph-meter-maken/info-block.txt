@@ -14,8 +14,8 @@ Category: soil
 
 ----
 
-Assignment: ph          
+Assignment: ph
 
 ----
 
-Download: AcidMeter.pdf
+Download: SmartKidsLab-Measure-acitidy.pdf

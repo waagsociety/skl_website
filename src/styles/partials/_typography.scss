@@ -7,8 +7,10 @@
   font-weight: normal;
   font-style: normal;
 }
-
-
+@font-face {
+  font-family: 'blockhead-black-face';
+  src: url('../fonts/BlockheadBlackFaceRegular.otf') format("opentype");
+}
 html{
   font-size: 100%;
 	-webkit-font-smoothing: antialiased;

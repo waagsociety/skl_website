@@ -1,0 +1,21 @@
+Title: Fart-o-meter
+
+----
+
+Text: Ever heard of the GREENHOUSE EFFECT. Your farts contain something called METHANE GAS (CH4), which is a GREENHOUSE GAS!  But Cows are the biggest offenders to our planets. Build a fart-o-meter using custom electronics.
+
+----
+
+Infoimage: image.png
+
+----
+
+Category: air
+
+----
+
+Assignment: gas
+
+----
+
+Download: SmartKidsLab-Measure-farts.pdf

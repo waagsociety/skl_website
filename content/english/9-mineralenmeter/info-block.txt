@@ -1,0 +1,20 @@
+Title: Minerals meter
+
+----
+
+Text: In almost all WATER, you can find MINERALS. Salt, for instance, is a mineral and the sea is full of it. Living ORGANISMS need minerals, but you can have TOO MUCH of a good thing. Build a water measuring device by using ELECTRICAL current from a BATTERY.
+----
+
+Infoimage: image.png
+
+----
+
+Category: water
+
+----
+
+Assignment: weerstand
+
+----
+
+Download: SmartKidsLab-Measure-minerals.pdf

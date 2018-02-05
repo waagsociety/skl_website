@@ -1,0 +1,21 @@
+Title: Microbes meter
+
+----
+
+Text: You’ll be investigating the SOIL in your area. There are millions of microorganisms, tiny fungi and bacteria called MICROBES, in the ground beneath you and they can function as a BATTERY!
+
+----
+
+Infoimage: image.png
+
+----
+
+Category: soil
+
+----
+
+Assignment: micros
+
+----
+
+Download: SmartKidsLab-Measure-microbes.pdf
