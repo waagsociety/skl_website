@@ -2,7 +2,7 @@
     <div class="introduction full__width text__center flex flex__center">
       <div>
 	       <p class="introdescription" style="text-align:center;">Met het Smart Kids Lab kun je water, geluid, lucht, aarde en licht onderzoeken met zelfgemaakte meetinstrumenten.</p>
-         <p class="introdescription" style="color:#d40000;margin:0 auto;text-align:center;">Investigate water, sound, air, soil and ligh in your neighbourhood.</p>
+         <p class="introdescription" style="color:#d40000;margin:0 auto;text-align:center;">Investigate water, sound, air, soil and light in your neighbourhood.</p>
       </div>
     </div>
 
